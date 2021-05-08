@@ -11,10 +11,10 @@
 					<div class="panel panel-headline">
 						<div class="panel-body">
               <center>
-                <h2 style="margin-top: 30px">Daftar Siswa</h2>
+                <h2 style="margin-top: 10px">Daftar Guru</h2>
               </center>
 							<?php include('../alert.php') ?>
-								<a style="margin-top: 30px; margin-bottom: 20px" type="button" class="btn btn-success btn-xs" href="siswa_tambah.php">Tambah Siswa</a>
+							<a style="margin-top: 10px; margin-bottom: 20px" type="button" class="btn btn-success btn-xs" href="guru_tambah.php">Tambah Guru</a>
 
               <table class="table table-bordered table-hover" id="example">
                   <thead>
@@ -23,16 +23,16 @@
                               <center>No
                           </th>
 													<th>
-															<center>NIS
+															<center>NIK
 													</th>
                           <th>
-                              <center>NISN
+                              <center>Nama Guru
                           </th>
                           <th>
-                              <center>Nama Siswa
+                              <center>Kompetensi
                           </th>
                           <th>
-                              <center>Kelas
+                              <center>Tugas Tambahan
                           </th>
                           <th>
                               <center>Pilihan
@@ -42,7 +42,7 @@
                   <?php
                   include '../koneksi.php';
                   $no = 1;
-                  $data = mysqli_query($koneksi, "SELECT * from tb_siswa, tb_kelas where tb_siswa.id_kelas=tb_kelas.id_kelas");
+                  $data = mysqli_query($koneksi, "SELECT * from tb_guru ");
                   while ($d = mysqli_fetch_array($data)) {
                   ?>
                       <tr>
@@ -50,26 +50,26 @@
                               <center><?php echo $no++ ?>
                           </td>
                           <td>
-                              <?php echo $d['nis_siswa']; ?>
+                              <?php echo $d['nik_guru']; ?>
                           </td>
 													<td>
-															<?php echo $d['nisn_siswa']; ?>
+															<?php echo $d['nama_guru']; ?>
 													</td>
                           <td>
-                              <?php echo $d['nama_siswa']; ?>
+                              <?php echo $d['kompetensi']; ?>
                           </td>
                           <td>
-                              <center><?php echo $d['tingkat']." ".$d['jurusan']." ".$d['kode_kelas'];  ?>
+                              <center><?= $d['tugas_tambahan'];  ?>
                           </td>
                           <td><center>
                               <!-- <a type="button" class="btn-primary btn-xs" href="#">Kecil</a> -->
-                              <a href="siswa_hapus.php?id_siswa=<?php echo $d['id_siswa']; ?>" onclick="return confirm('Anda yakin Hapus data kelas <?php echo $d['nama_siswa']; ?> ?')">
+                              <a href="guru_hapus.php?id_guru=<?php echo $d['id_guru']; ?>" onclick="return confirm('Anda yakin Hapus data guru <?php echo $d['nama_guru']; ?> ?')">
                                 <span class="label label-danger">Hapus</span>
                               </a>
-                              <a href="siswa_edit.php?id_siswa=<?php echo $d['id_siswa'] ?>">
+                              <a href="guru_edit.php?id_guru=<?php echo $d['id_guru'] ?>">
                                 <span class="label label-primary">Edit</span>
                               </a>
-                              <a href="siswa_detail.php?id_siswa=<?php echo $d['id_siswa'] ?>">
+                              <a href="guru_detail.php?id_guru=<?php echo $d['id_guru'] ?>">
                                 <span class="label label-success">Detail</span>
                               </a>
                           </td>
