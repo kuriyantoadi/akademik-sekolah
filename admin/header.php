@@ -60,24 +60,14 @@
 				<nav>
 					<ul class="nav">
 						<li><a href="dashboard.php" class=""><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
+						<li><a href="prakerin.php" class=""><i class="lnr lnr-list"></i> <span>Daftar Tempat Prakerin</span></a></li>
+						<li><a href="pengajuan.php" class=""><i class="lnr lnr-enter-down"></i> <span>Daftar Pengajuan PKL</span></a></li>
+
 						<li><a href="guru.php" class=""><i class="lnr lnr-user"></i> <span>Daftar Guru</span></a></li>
 						<li><a href="siswa.php" class=""><i class="lnr lnr-users"></i> <span>Data Siswa</span></a></li>
 						<li><a href="kelas.php" class=""><i class="lnr lnr-list"></i> <span>Daftar Kelas</span></a></li>
 						<li><a href="jurusan.php" class=""><i class="lnr lnr-inbox"></i> <span>Daftar Jurusan</span></a></li>
-						<li><a href="notifications.html" class=""><i class="lnr lnr-alarm"></i> <span>Notifications</span></a></li>
-						<li>
-							<a href="#subPages" data-toggle="collapse" class="collapsed"><i class="lnr lnr-file-empty"></i> <span>Pages</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
-							<div id="subPages" class="collapse ">
-								<ul class="nav">
-									<li><a href="page-profile.html" class="">Profile</a></li>
-									<li><a href="page-login.html" class="">Login</a></li>
-									<li><a href="page-lockscreen.html" class="">Lockscreen</a></li>
-								</ul>
-							</div>
-						</li>
-						<li><a href="tables.html" class=""><i class="lnr lnr-dice"></i> <span>Tables</span></a></li>
-						<li><a href="typography.html"><i class="lnr lnr-text-format"></i> <span>Typography</span></a></li>
-						<li><a href="icons.html" class=""><i class="lnr lnr-linearicons"></i> <span>Icons</span></a></li>
+
 					</ul>
 				</nav>
 			</div>

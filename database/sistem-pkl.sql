@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 08, 2021 at 11:09 
+-- Generation Time: May 09, 2021 at 07:59 
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -69,7 +69,6 @@ CREATE TABLE `tb_guru` (
   `email` varchar(100) NOT NULL,
   `tahun_pensiun` varchar(10) NOT NULL,
   `tugas_tambahan` varchar(100) NOT NULL,
-  `tmt_tambahan` varchar(30) NOT NULL,
   `tmt_tugas_tambahan` varchar(30) NOT NULL,
   `jml_jam_tugas_tambahan` varchar(30) NOT NULL,
   `jml_jam_mengajar` varchar(30) NOT NULL,
@@ -80,10 +79,9 @@ CREATE TABLE `tb_guru` (
 -- Dumping data for table `tb_guru`
 --
 
-INSERT INTO `tb_guru` (`id_guru`, `tgl_perubahan`, `sinkron_terakhir`, `no_surat_tugas`, `tgl_surat_tugas`, `thn_ajaran`, `sklh_induk`, `nama_guru`, `nik_guru`, `jk`, `tempat_lahir`, `tgl_lahir`, `nama_ibu_kandung`, `alamat`, `agama`, `status_perkawinan`, `nama_pasangan`, `pekerjaan_pasangan`, `npwp`, `nama_wajib_pajak`, `jenis_gtk`, `nuptk`, `status_peg`, `nip`, `sk_cpns`, `tmt_cpns`, `tmt_sk_pengangkatan`, `sumber_gaji`, `pangkat_gol`, `tmt_pangkat_gol`, `masa_kerja`, `sk_pengangkatan`, `tmt_pengangkatan`, `lembaga_pengangkatan`, `kartu_pegawai`, `kartu_pasangan`, `kompetensi`, `pendidikan_terakhir`, `status_kuliah`, `email`, `tahun_pensiun`, `tugas_tambahan`, `tmt_tambahan`, `tmt_tugas_tambahan`, `jml_jam_tugas_tambahan`, `jml_jam_mengajar`, `jml_mengajar_tugas_tmbh`) VALUES
-(1, '', '', '', '', '', '', 'Aji aji tanpo pengaji', '123', '123', '123', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-(2, '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1'),
-(3, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO `tb_guru` (`id_guru`, `tgl_perubahan`, `sinkron_terakhir`, `no_surat_tugas`, `tgl_surat_tugas`, `thn_ajaran`, `sklh_induk`, `nama_guru`, `nik_guru`, `jk`, `tempat_lahir`, `tgl_lahir`, `nama_ibu_kandung`, `alamat`, `agama`, `status_perkawinan`, `nama_pasangan`, `pekerjaan_pasangan`, `npwp`, `nama_wajib_pajak`, `jenis_gtk`, `nuptk`, `status_peg`, `nip`, `sk_cpns`, `tmt_cpns`, `tmt_sk_pengangkatan`, `sumber_gaji`, `pangkat_gol`, `tmt_pangkat_gol`, `masa_kerja`, `sk_pengangkatan`, `tmt_pengangkatan`, `lembaga_pengangkatan`, `kartu_pegawai`, `kartu_pasangan`, `kompetensi`, `pendidikan_terakhir`, `status_kuliah`, `email`, `tahun_pensiun`, `tugas_tambahan`, `tmt_tugas_tambahan`, `jml_jam_tugas_tambahan`, `jml_jam_mengajar`, `jml_mengajar_tugas_tmbh`) VALUES
+(1, '', '', '', '', '', '', 'Aji aji tanpo pengaji', '123', '123', '123', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(4, '09-05-2021', '1', '1', '09-05-2021', '1', '1', '1', '1', '', '1', '', '1', '1', '', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1');
 
 -- --------------------------------------------------------
 
@@ -203,7 +201,9 @@ CREATE TABLE `tb_siswa` (
 
 INSERT INTO `tb_siswa` (`id_siswa`, `nis_siswa`, `nisn_siswa`, `nama_siswa`, `id_kelas`, `jk`, `tempat_lahir`, `tgl_lahir`, `agama`, `anak_ke`, `status_dlm_keluarga`, `alamat`, `no_hp`, `tgl_diterima`, `diterima_kelas`, `sms_diterima`, `asal_sklh`, `almt_asal_sklh`, `no_ijzh_smp`, `thn_ijzh_smp`, `no_skhun_smp`, `thn_skhun_smp`, `nama_ayah`, `nama_ibu`, `alamat_orgtua`, `no_hp_orgtua`, `pekerjaan_ayah`, `pekerjaan_ibu`, `nama_wali`, `alamat_wali`, `no_hp_wali`, `pekerjaan_wali`) VALUES
 (3, 0, 0, '', '', 'Perempuan', '', '', 'Islam', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-(4, 1111, 2, '2', '10', 'Perempuan', '2', '2', 'Katolik', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2');
+(4, 1111, 2, '2', '10', 'Perempuan', '2', '2', 'Katolik', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2'),
+(5, 0, 0, '', '', 'Laki-laki', '1', '13-05-2021', 'Islam', '', '', '1', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(6, 0, 0, '', '', 'Laki-laki', '1', '', 'Islam', '', '', '1', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -279,7 +279,7 @@ ALTER TABLE `tb_user`
 -- AUTO_INCREMENT for table `tb_guru`
 --
 ALTER TABLE `tb_guru`
-  MODIFY `id_guru` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_guru` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `tb_jurusan`
 --
@@ -304,7 +304,7 @@ ALTER TABLE `tb_prakerin`
 -- AUTO_INCREMENT for table `tb_siswa`
 --
 ALTER TABLE `tb_siswa`
-  MODIFY `id_siswa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_siswa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `tb_user`
 --

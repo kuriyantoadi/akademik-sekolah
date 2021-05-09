@@ -10,3 +10,11 @@
 08 mei 2021
 - crud guru (lia yg ngerjain)
 - crud prakerin (kerjain sendiri)
+
+09 mei 2021
+
+belum selesai
+- prakerin_tambah_up.php
+- prakerin_edit.php
+- prakerin_edit_up.php
+- guru_edit_up.php
