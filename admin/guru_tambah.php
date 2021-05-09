@@ -11,10 +11,10 @@
 					<div class="panel panel-headline">
             <div class="panel">
               <div class="panel-heading">
-                <h3 class="panel-title"><center>Tambah Siswa Baru</h3>
+                <h3 class="panel-title"><center>Tambah Guru Baru</h3>
               </div>
 
-              <form class="" action="siswa_tambah_up.php" method="post">
+              <form class="" action="guru_tambah_up.php" method="post">
 
               <div class="panel-body">
                 <p>Tanggal Perubahan</p>
@@ -64,6 +64,9 @@
                 <br>
                 <p>Nama Suami/Istri</p>
                   <input type="text" name="nama_pasangan" class="form-control" required>
+                <br>
+								<p>Pekerjaan Suami/Istri</p>
+                  <input type="text" name="pekerjaan_pasangan" class="form-control" required>
                 <br>
                 <p>Nomor NPWP</p>
                   <input type="text" name="npwp" class="form-control" required>

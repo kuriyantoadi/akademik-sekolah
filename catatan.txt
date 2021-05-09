@@ -6,3 +6,7 @@
 07 mei 2021
 - tambah kelas
 - tambah jurusan dan halaman jurusan
+
+08 mei 2021
+- crud guru (lia yg ngerjain)
+- crud prakerin (kerjain sendiri)

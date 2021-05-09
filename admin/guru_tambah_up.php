@@ -21,6 +21,7 @@ $nama_ibu_kandung = $_POST['nama_ibu_kandung'];
 $alamat = $_POST['alamat'];
 $status_perkawinan = $_POST['status_perkawinan'];
 $nama_pasangan = $_POST['nama_pasangan'];
+$pekerjaan_pasangan = $_POST['pekerjaan_pasangan'];
 $npwp = $_POST['npwp'];
 $nama_wajib_pajak = $_POST['nama_wajib_pajak'];
 $jenis_gtk = $_POST['jenis_gtk'];
@@ -53,19 +54,22 @@ $jml_mengajar_tugas_tmbh = $_POST['jml_mengajar_tugas_tmbh'];
 $cek_tambah = mysqli_query($koneksi, "INSERT INTO tb_guru Values('',
   -- masukan nama-nama variabel post urut dari seperti di tabel tb_guru
   '$tgl_perubahan',
-  '$sinkron_terakhir', 
+  '$sinkron_terakhir',
   '$no_surat_tugas',
   '$tgl_surat_tugas',
   '$thn_ajaran',
   '$sklh_induk',
   '$nama_guru',
   '$nik_guru',
+  '$jk',
   '$tempat_lahir',
   '$tgl_lahir',
   '$nama_ibu_kandung',
   '$alamat',
+  '$agama',
   '$status_perkawinan',
   '$nama_pasangan',
+  '$pekerjaan_pasangan',
   '$npwp',
   '$nama_wajib_pajak',
   '$jenis_gtk',
@@ -93,7 +97,7 @@ $cek_tambah = mysqli_query($koneksi, "INSERT INTO tb_guru Values('',
   '$tmt_tugas_tambahan',
   '$jml_jam_tugas_tambahan',
   '$jml_jam_mengajar',
-  '$jml_mengajar_tugas_tmbh',
+  '$jml_mengajar_tugas_tmbh'
   )");
 
 if ($cek_tambah) {
