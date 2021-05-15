@@ -11,12 +11,10 @@
       <div class="panel panel-headline">
         <div class="panel-body">
           <center>
-            <h2 style="margin-top: 30px">Daftar Industri</h2>
+            <h2 style="margin-top: 30px; margin-bottom: 50px">Daftar Pengajuan Prakerin</h2>
           </center>
 
           <?php include('../alert.php') ?>
-
-          <a style=" margin-bottom: 20px" type="button" class="btn btn-success btn-xs" href="industri_tambah.php">Tambah Industri</a>
 
           <table class="table table-bordered table-hover" id="example">
             <thead>
@@ -25,10 +23,16 @@
                   <center>No
                 </th>
                 <th>
-                  <center>Nama Tempat industri
+                  <center>Nama Siswa
                 </th>
                 <th>
-                  <center>Jenis Tempat industri
+                  <center>Tempat Prakerin
+                </th>
+                <th>
+                  <center>Tanggal Pengajuan
+                </th>
+                <th>
+                  <center>Kondisi
                 </th>
                 <th>
                   <center>Pilihan
@@ -38,7 +42,8 @@
             <?php
                     include '../koneksi.php';
                     $no = 1;
-                    $data = mysqli_query($koneksi, "SELECT * from tb_industri ");
+                    $data = mysqli_query($koneksi, "SELECT * from tb_pengajuan, tb_industri, tb_siswa
+                      where tb_pengajuan.id_industri=tb_industri.id_industri and tb_siswa.nisn_siswa=tb_pengajuan.nisn_siswa ");
                     while ($d = mysqli_fetch_array($data)) {
                     ?>
             <tr>
@@ -46,25 +51,22 @@
                 <center><?php echo $no++ ?>
               </td>
               <td>
-                <?= $d['nama_industri']; ?>
+                <?= $d['nama_siswa']; ?>
               </td>
               <td>
-                <?= $d['jenis_industri']; ?>
+                <?= $d['nama_industri']; ?>
+              </td>
+              <td><center>
+                <?= $d['tgl_pengajuan']; ?>
+              </td>
+              <td><center>
+                <?= $d['kondisi']; ?>
               </td>
 
               <td>
                 <center>
-                  <a href="industri_hapus.php?id_industri=<?php echo $d['id_industri']; ?>" onclick="return confirm('Anda yakin Hapus data industri <?= $d['nama_industri']; ?> ?')">
-                    <span class="label label-danger">Hapus</span>
-                  </a>
-                  <a href="industri_edit.php?id_industri=<?php echo $d['id_industri'] ?>">
-                    <span class="label label-primary">Edit</span>
-                  </a>
-                  <a href="https://<?= $d['link_industri'] ?>">
-                    <span class="label label-default">Lihat Web</span>
-                  </a>
-                  <a href="industri_lihat.php?id_industri=<?= $d['id_industri'] ?>">
-                    <span class="label label-success">Lihat</span>
+                  <a href="<?= $d['link_industri'] ?>">
+                    <span class="label label-success">Lihat Pengajuan</span>
                   </a>
               </td>
             </tr>

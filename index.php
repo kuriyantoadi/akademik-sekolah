@@ -2,7 +2,7 @@
 <html lang="en" class="fullscreen-bg">
 
 <head>
-	<title>Login | Klorofil - Free Bootstrap Dashboard Template</title>
+	<title>Login</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -36,19 +36,14 @@
 							<form class="form-auth-small" method="post" action="cek-login.php">
                 <?php include('alert.php') ?>
 								<div class="form-group">
-									<label for="signin-email" class="control-label sr-only">Username</label>
-									<input type="text" name="username" class="form-control" id="signin-email" placeholder="Username">
+									<label for="signin-email" class="control-label sr-only">NISN</label>
+									<input type="text" name="nisn_siswa" class="form-control" placeholder="nisn">
 								</div>
 								<div class="form-group">
 									<label for="signin-password" class="control-label sr-only">Password</label>
-									<input type="password" name="password" class="form-control" id="signin-password" placeholder="Password">
+									<input type="password" name="password" class="form-control"  placeholder="Password">
 								</div>
-								<!-- <div class="form-group clearfix">
-									<label class="fancy-checkbox element-left">
-										<input type="checkbox">
-										<span>Remember me</span>
-									</label>
-								</div> -->
+
 								<button type="submit" class="btn btn-primary btn-lg btn-block">LOGIN</button>
 								<div class="bottom">
 									<span class="helper-text"><i class="fa fa-lock"></i> <a href="#">Forgot password?</a></span>

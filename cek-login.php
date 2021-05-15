@@ -11,14 +11,14 @@ include 'koneksi.php';
 
 // menangkap data yang dikirim dari form
 // belum mengunakan MD5
-$username = addslashes(trim($_POST['username']));
-// $nisn = $_POST['nisn'];
+$nisn_siswa = addslashes(trim($_POST['nisn_siswa']));
+// $nisn_siswa = $_POST['nisn_siswa'];
 $password = md5($_POST['password']);
 // echo "salah php";
 
 
-// menyeleksi data admin dengan nisn dan password yang sesuai
-$data = mysqli_query($koneksi, "select * from tb_user where username='$username' and password='$password'");
+// menyeleksi data admin dengan nisn_siswa dan password yang sesuai
+$data = mysqli_query($koneksi, "select * from tb_siswa where nisn_siswa='$nisn_siswa' and password='$password'");
 
 // menghitung jumlah data yang ditemukan
 $cek = mysqli_num_rows($data);
@@ -28,16 +28,17 @@ $cek = mysqli_num_rows($data);
 if ($cek > 0) {
     $login = mysqli_fetch_assoc($data);
 
-    if ($login['status']=="admin") {
-        $_SESSION['useranme'] = $username;
-        $_SESSION['status'] = "admin";
+    if ($login['status']=="siswa") {
+        $_SESSION['nisn_siswa'] = $nisn_siswa;
+        $_SESSION['status'] = "siswa";
         // echo "cek";
-        header("location:dashboard.php?username=$useranme");
+        header("location:dashboard.php");
+
     } else {
         // echo "salah1";
-        header("location:login.php?pesan=login-gagal1");
+        header("location:index.php?pesan=login-gagal");
     }
 } else {
     // echo "salah2";
-    header("location:login.php?pesan=login-gagal2");
+    header("location:index.php?pesan=login-gagal");
 }

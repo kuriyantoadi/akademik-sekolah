@@ -1,3 +1,12 @@
+<?php
+ob_start();
+session_start();
+if ($_SESSION['status'] != "siswa") {
+    header("location:index.php?pesan=belum_login");
+}
+$nisn_siswa = $_SESSION['nisn_siswa'];
+ ?>
+
 <!doctype html>
 <html lang="en">
 
@@ -39,11 +48,12 @@
 					<ul class="nav navbar-nav navbar-right">
 
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="assets/img/user.png" class="img-circle" alt="Avatar"> <span>Samuel</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="assets/img/user.png" class="img-circle" alt="Avatar">
+								<span><?= $nisn_siswa ?></span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
 							<ul class="dropdown-menu">
 								<li><a href="#"><i class="lnr lnr-user"></i> <span>Profil Saya</span></a></li>
 								<li><a href="#"><i class="lnr lnr-cog"></i> <span>Ubah Kata Sandi</span></a></li>
-								<li><a href="#"><i class="lnr lnr-exit"></i> <span>Keluar</span></a></li>
+								<li><a href="logout.php"><i class="lnr lnr-exit"></i> <span>Keluar</span></a></li>
 							</ul>
 						</li>
 
@@ -57,24 +67,10 @@
 			<div class="sidebar-scroll">
 				<nav>
 					<ul class="nav">
-						<li><a href="index.html" class=""><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
-						<li><a href="elements.html" class=""><i class="lnr lnr-code"></i> <span>Elements</span></a></li>
-						<li><a href="charts.html" class=""><i class="lnr lnr-chart-bars"></i> <span>Charts</span></a></li>
-						<li><a href="panels.html" class=""><i class="lnr lnr-cog"></i> <span>Panels</span></a></li>
-						<li><a href="notifications.html" class=""><i class="lnr lnr-alarm"></i> <span>Notifications</span></a></li>
-						<li>
-							<a href="#subPages" data-toggle="collapse" class="collapsed"><i class="lnr lnr-file-empty"></i> <span>Pages</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
-							<div id="subPages" class="collapse ">
-								<ul class="nav">
-									<li><a href="page-profile.html" class="">Profile</a></li>
-									<li><a href="page-login.html" class="">Login</a></li>
-									<li><a href="page-lockscreen.html" class="">Lockscreen</a></li>
-								</ul>
-							</div>
-						</li>
-						<li><a href="tables.html" class=""><i class="lnr lnr-dice"></i> <span>Tables</span></a></li>
-						<li><a href="typography.html" class="active"><i class="lnr lnr-text-format"></i> <span>Typography</span></a></li>
-						<li><a href="icons.html" class=""><i class="lnr lnr-linearicons"></i> <span>Icons</span></a></li>
+						<li><a href="dashboard.php" class=""><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
+						<li><a href="industri.php" class=""><i class="lnr lnr-list"></i> <span>Daftar Industri</span></a></li>
+            <li><a href="pengajuan_form_lihat.php?nisn_siswa=<?= $nisn_siswa ?>" class=""><i class="lnr lnr-upload"></i> <span>Form Pengajuan Prakerin</span></a></li>
+
 					</ul>
 				</nav>
 			</div>

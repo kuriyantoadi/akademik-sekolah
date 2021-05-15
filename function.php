@@ -20,6 +20,15 @@ function select_jurusan(){
   <?php }
 }
 
+function s_industri(){
+  include('koneksi.php');
+  $db_ids = mysqli_query($koneksi, "select * from tb_industri");
+  while ($s_ids = mysqli_fetch_array($db_ids)) {
+  ?>
+      <option value="<?= $s_ids['id_industri'] ?>"> <?= $s_ids['nama_industri'] ?> </option>
+  <?php }
+}
+
 function select_kode_kelas(){
   for ($i=1; $i < 10; $i++) { ?>
     <option value="<?= $i ?>"> <?= $i ?> </option>
@@ -46,6 +55,7 @@ function s_agama(){
   <option value="Hindu">Hindu</option>
   <option value="budha">Budha</option>
 </select>
+
 <?php }
 
 

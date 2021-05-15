@@ -29,10 +29,10 @@ if ($cek > 0) {
     $login = mysqli_fetch_assoc($data);
 
     if ($login['status']=="admin") {
-        $_SESSION['useranme'] = $username;
+        $_SESSION['username'] = $username;
         $_SESSION['status'] = "admin";
         // echo "cek";
-        header("location:dashboard.php?username=$useranme");
+        header("location:dashboard.php");
     } else {
         // echo "salah1";
         header("location:login.php?pesan=login-gagal1");

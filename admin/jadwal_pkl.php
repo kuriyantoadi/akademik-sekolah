@@ -11,12 +11,12 @@
       <div class="panel panel-headline">
         <div class="panel-body">
           <center>
-            <h2 style="margin-top: 30px">Daftar Industri</h2>
+            <h2 style="margin-top: 30px">Jadwal Prakerin</h2>
           </center>
 
           <?php include('../alert.php') ?>
 
-          <a style=" margin-bottom: 20px" type="button" class="btn btn-success btn-xs" href="industri_tambah.php">Tambah Industri</a>
+          <a style=" margin-bottom: 20px" type="button" class="btn btn-success btn-xs" href="jadwal_pkl_tambah.php">Tambah Jadwal Prakerin</a>
 
           <table class="table table-bordered table-hover" id="example">
             <thead>
@@ -25,10 +25,19 @@
                   <center>No
                 </th>
                 <th>
-                  <center>Nama Tempat industri
+                  <center>Nama Tempat Prakerin
                 </th>
                 <th>
-                  <center>Jenis Tempat industri
+                  <center>Tanggal Mulai
+                </th>
+                <th>
+                  <center>Tanggal Selesai
+                </th>
+                <th>
+                  <center>Kouta
+                </th>
+                <th>
+                  <center>Status
                 </th>
                 <th>
                   <center>Pilihan
@@ -38,7 +47,7 @@
             <?php
                     include '../koneksi.php';
                     $no = 1;
-                    $data = mysqli_query($koneksi, "SELECT * from tb_industri ");
+                    $data = mysqli_query($koneksi, "SELECT * from tb_jadwal_pkl,tb_industri where tb_industri.id_industri=tb_jadwal_pkl.id_industri ");
                     while ($d = mysqli_fetch_array($data)) {
                     ?>
             <tr>
@@ -49,22 +58,25 @@
                 <?= $d['nama_industri']; ?>
               </td>
               <td>
-                <?= $d['jenis_industri']; ?>
+                <?= $d['tgl_mulai']; ?>
+              </td>
+              <td><center>
+                <?= $d['tgl_selesai']; ?>
+              </td>
+              <td><center>
+                <?= $d['kuota']; ?>
+              </td>
+              <td><center>
+                <?= $d['status']; ?>
               </td>
 
               <td>
                 <center>
-                  <a href="industri_hapus.php?id_industri=<?php echo $d['id_industri']; ?>" onclick="return confirm('Anda yakin Hapus data industri <?= $d['nama_industri']; ?> ?')">
+                  <a href="jadwal_pkl_hapus.php?id_jadwal_pkl=<?php echo $d['id_jadwal_pkl']; ?>" onclick="return confirm('Anda yakin Hapus data jadwal_pkl <?= $d['nama_industri']; ?> ?')">
                     <span class="label label-danger">Hapus</span>
                   </a>
-                  <a href="industri_edit.php?id_industri=<?php echo $d['id_industri'] ?>">
+                  <a href="jadwal_pkl_edit.php?id_jadwal_pkl=<?= $d['id_jadwal_pkl'] ?>">
                     <span class="label label-primary">Edit</span>
-                  </a>
-                  <a href="https://<?= $d['link_industri'] ?>">
-                    <span class="label label-default">Lihat Web</span>
-                  </a>
-                  <a href="industri_lihat.php?id_industri=<?= $d['id_industri'] ?>">
-                    <span class="label label-success">Lihat</span>
                   </a>
               </td>
             </tr>

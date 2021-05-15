@@ -1,3 +1,12 @@
+<?php
+ob_start();
+session_start();
+if ($_SESSION['status'] != "admin") {
+    header("location:index.php?pesan=belum_login");
+}
+$username = $_SESSION['username'];
+ ?>
+
 <!doctype html>
 <html lang="en">
 
@@ -24,6 +33,7 @@
 </head>
 
 <body>
+  <?= $username ?>
 	<!-- WRAPPER -->
 	<div id="wrapper">
 		<!-- NAVBAR -->
@@ -41,11 +51,12 @@
 					<ul class="nav navbar-nav navbar-right">
 
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="../assets/img/user.png" class="img-circle" alt="Avatar"> <span>Samuel</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="../assets/img/user.png" class="img-circle" alt="Avatar">
+                <span><?php echo $username ?></span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
 							<ul class="dropdown-menu">
 								<li><a href="#"><i class="lnr lnr-user"></i> <span>Profil Saya</span></a></li>
 								<li><a href="#"><i class="lnr lnr-cog"></i> <span>Ubah Kata Sandi</span></a></li>
-								<li><a href="#"><i class="lnr lnr-exit"></i> <span>Keluar</span></a></li>
+								<li><a href="logout.php"><i class="lnr lnr-exit"></i> <span>Keluar</span></a></li>
 							</ul>
 						</li>
 
@@ -60,9 +71,9 @@
 				<nav>
 					<ul class="nav">
 						<li><a href="dashboard.php" class=""><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
-						<li><a href="prakerin.php" class=""><i class="lnr lnr-list"></i> <span>Daftar Tempat Prakerin</span></a></li>
+						<li><a href="industri.php" class=""><i class="lnr lnr-list"></i> <span>Daftar Industri</span></a></li>
+            <li><a href="jadwal_pkl.php" class=""><i class="lnr lnr-clock"></i> <span>Daftar Jadwal PKL</span></a></li>
 						<li><a href="pengajuan.php" class=""><i class="lnr lnr-enter-down"></i> <span>Daftar Pengajuan PKL</span></a></li>
-
 						<li><a href="guru.php" class=""><i class="lnr lnr-user"></i> <span>Daftar Guru</span></a></li>
 						<li><a href="siswa.php" class=""><i class="lnr lnr-users"></i> <span>Data Siswa</span></a></li>
 						<li><a href="kelas.php" class=""><i class="lnr lnr-list"></i> <span>Daftar Kelas</span></a></li>

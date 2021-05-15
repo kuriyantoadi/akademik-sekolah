@@ -1,5 +1,5 @@
 <?php include('header.php') ?>
-<?php include('../function.php') ?>
+<?php include('function.php') ?>
 
 <!-- END LEFT SIDEBAR -->
 <!-- MAIN -->
@@ -14,9 +14,7 @@
             <h2 style="margin-top: 30px">Daftar Industri</h2>
           </center>
 
-          <?php include('../alert.php') ?>
-
-          <a style=" margin-bottom: 20px" type="button" class="btn btn-success btn-xs" href="industri_tambah.php">Tambah Industri</a>
+          <?php include('alert.php') ?>
 
           <table class="table table-bordered table-hover" id="example">
             <thead>
@@ -31,14 +29,21 @@
                   <center>Jenis Tempat industri
                 </th>
                 <th>
+                  <center>Kuota
+                </th>
+                <th>
+                  <center>Status
+                </th>
+                <th>
                   <center>Pilihan
                 </th>
               </tr>
             </thead>
             <?php
-                    include '../koneksi.php';
+                    include 'koneksi.php';
                     $no = 1;
-                    $data = mysqli_query($koneksi, "SELECT * from tb_industri ");
+                    $data = mysqli_query($koneksi, "SELECT * from tb_industri, tb_jadwal_pkl where
+                      tb_industri.id_industri=tb_jadwal_pkl.id_industri and tb_jadwal_pkl.status='buka' ");
                     while ($d = mysqli_fetch_array($data)) {
                     ?>
             <tr>
@@ -51,19 +56,20 @@
               <td>
                 <?= $d['jenis_industri']; ?>
               </td>
+              <td><center>
+                <?= $d['kuota']; ?>
+              </td>
+              <td><center>
+                <?= $d['status']; ?>
+              </td>
 
               <td>
                 <center>
-                  <a href="industri_hapus.php?id_industri=<?php echo $d['id_industri']; ?>" onclick="return confirm('Anda yakin Hapus data industri <?= $d['nama_industri']; ?> ?')">
-                    <span class="label label-danger">Hapus</span>
-                  </a>
-                  <a href="industri_edit.php?id_industri=<?php echo $d['id_industri'] ?>">
-                    <span class="label label-primary">Edit</span>
-                  </a>
+
                   <a href="https://<?= $d['link_industri'] ?>">
                     <span class="label label-default">Lihat Web</span>
                   </a>
-                  <a href="industri_lihat.php?id_industri=<?= $d['id_industri'] ?>">
+                  <a href="industri_lihat.php?id_jadwal_pkl=<?= $d['id_jadwal_pkl'] ?>">
                     <span class="label label-success">Lihat</span>
                   </a>
               </td>
