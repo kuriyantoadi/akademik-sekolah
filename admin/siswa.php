@@ -72,6 +72,9 @@
                               <a href="siswa_detail.php?id_siswa=<?php echo $d['id_siswa'] ?>">
                                 <span class="label label-success">Detail</span>
                               </a>
+															<a href="siswa_password.php?id_siswa=<?php echo $d['id_siswa'] ?>">
+                                <span class="label label-warning">Password</span>
+                              </a>
                           </td>
                       </tr>
                   <?php

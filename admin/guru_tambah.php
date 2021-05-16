@@ -92,7 +92,7 @@
                 <p>tmt CPNS</p>
                   <input type="text" name="tmt_cpns" class="form-control" required>
                 <br>
-                <p>tmt Pengangkatan</p>
+                <p>tmt SK Pengangkatan</p>
                   <input type="text" name="tmt_sk_pengangkatan" class="form-control" required>
                 <br>
                 <p>Sumber Gaji</p>

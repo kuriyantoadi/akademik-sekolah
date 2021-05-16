@@ -4,17 +4,17 @@
 - Edit Siswa (ok)
 
 07 mei 2021
-- tambah kelas
-- tambah jurusan dan halaman jurusan
+- tambah kelas(ok)
+- tambah jurusan dan halaman jurusan (ok)
 
 
 09 mei 2021
 
 belum selesai
-- prakerin_tambah_up.php
-- prakerin_edit.php
-- prakerin_edit_up.php
-- guru_edit_up.php
+- prakerin_tambah_up.php (ok)
+- prakerin_edit.php (ok)
+- prakerin_edit_up.php (ok)
+- guru_edit_up.php (ok)
 
 10 Mei 2021
 - pengajuan PKL
@@ -24,5 +24,5 @@ belum selesai
 - gambar profil (ok)
 - ubah kata sandi admin dan siswa (ok)
 - lihat pengajuan dan hapus pengajuan (ok)
-- cek tambah guru dan tambah siswa di akun admin
+- cek tambah guru dan tambah siswa di akun admin (ok)
 - ganti logo (ok)

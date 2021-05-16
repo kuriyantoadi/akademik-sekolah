@@ -45,6 +45,13 @@ function jk(){
 </select>
 <?php }
 
+function edit_jk(){
+?>
+  <option value="Laki-laki">Laki-laki</option>
+  <option value="Perempuan">Perempuan</option>
+<?php }
+
+
 function s_agama(){
 ?>
 <select class="form-control" name="agama" required>
@@ -56,6 +63,15 @@ function s_agama(){
   <option value="budha">Budha</option>
 </select>
 
+<?php }
+
+function edit_agama(){
+  ?>
+  <option value="Islam">Islam</option>
+  <option value="Kristen">Kristen</option>
+  <option value="Katolik">Katolik</option>
+  <option value="Hindu">Hindu</option>
+  <option value="budha">Budha</option>
 <?php }
 
 

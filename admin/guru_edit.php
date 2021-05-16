@@ -27,6 +27,7 @@
                  <!-- ganti sesuaikan dengan yg ada di tambah guru -->
                 <p>Tanggal Perubahan</p>
                   <!-- tinggal ganti isi name dan value nya seperti yg ada di tb_guru -->
+									<input type="hidden" name="id_guru" class="form-control" value="<?= $d['id_guru'] ?>" required>
                   <input type="text" name="tgl_perubahan" class="form-control" value="<?= $d['tgl_perubahan'] ?>" required>
                 <br>
                 <p>Sinkronisasi Terakhir</p>
@@ -51,8 +52,11 @@
                   <input type="text" name="nik_guru" class="form-control" value="<?= $d['nik_guru'] ?>" required>
                 <br>
                 <p>Jenis Kelamin</p>
-                  <?php jk() ?>
-                <br>
+									<select class="form-control" name="jk" required>
+								  	<option value="<?= $d['jk'] ?>">Pilihan Awal (<?= $d['jk'] ?>)</option>
+										<?php edit_jk() ?>
+									</select>
+								<br>
                 <p>Tempat Lahir</p>
                   <input type="text" name="tempat_lahir" class="form-control" value="<?= $d['tempat_lahir'] ?>" required>
                 <br>
@@ -66,13 +70,20 @@
                   <input type="text" name="alamat" class="form-control" value="<?= $d['alamat'] ?>" required>
                 <br>
                 <p>Agama</p>
-                  <?php s_agama() ?>
+								<select class="form-control" name="agama" required>
+									<option value="<?= $d['agama'] ?>">Pilihan Awal (<?= $d['agama'] ?>)</option>
+									<?php edit_agama() ?>
+								</select>
+
                 <br>
                 <p>Status Pekawinan</p>
                   <input type="text" name="status_perkawinan" class="form-control" value="<?= $d['status_perkawinan'] ?>" required>
                 <br>
                 <p>Nama Suami/Istri</p>
                   <input type="text" name="nama_pasangan" class="form-control" value="<?= $d['nama_pasangan'] ?>" required>
+                <br>
+								<p>Pekerjaan Pasangan</p>
+                  <input type="text" name="pekerjaan_pasangan" class="form-control" value="<?= $d['pekerjaan_pasangan'] ?>" required>
                 <br>
                 <p>Nomor NPWP</p>
                   <input type="text" name="npwp" class="form-control" value="<?= $d['npwp'] ?>" required>
@@ -117,10 +128,10 @@
                   <input type="text" name="sk_pengangkatan" class="form-control" value="<?= $d['sk_pengangkatan'] ?>" required>
                 <br>
                 <p>tmt Pengangkatan</p>
-                  <input type="text" name="tmt_pengkatan" class="form-control" value="<?= $d['tmt_pengkatan'] ?>" required>
+                  <input type="text" name="tmt_pengangkatan" class="form-control" value="<?= $d['tmt_pengangkatan'] ?>" required>
                 <br>
                 <p>Lembaga Pengangkatan</p>
-                  <input type="text" name="lembaga_pengakatan" class="form-control" value="<?= $d['lembaga_pengakatan'] ?>" required>
+                  <input type="text" name="lembaga_pengangkatan" class="form-control" value="<?= $d['lembaga_pengangkatan'] ?>" required>
                 <br>
                 <p>Kartu Pegawai</p>
                   <input type="text" name="kartu_pegawai" class="form-control" value="<?= $d['kartu_pegawai'] ?>" required>

@@ -72,7 +72,7 @@
 
               <td>
                 <center>
-                  <a href="jadwal_pkl_hapus.php?id_jadwal_pkl=<?php echo $d['id_jadwal_pkl']; ?>" onclick="return confirm('Anda yakin Hapus data jadwal_pkl <?= $d['nama_industri']; ?> ?')">
+                  <a href="jadwal_pkl_hapus.php?id_jadwal_pkl=<?php echo $d['id_jadwal_pkl']; ?>" onclick="return confirm('Anda yakin Hapus data Jadwal Prakerin <?= $d['nama_industri']; ?> ?')">
                     <span class="label label-danger">Hapus</span>
                   </a>
                   <a href="jadwal_pkl_edit.php?id_jadwal_pkl=<?= $d['id_jadwal_pkl'] ?>">

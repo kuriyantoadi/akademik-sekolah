@@ -42,6 +42,8 @@ $pekerjaan_wali = $_POST['pekerjaan_wali'];
 $cek_tambah = mysqli_query($koneksi, "INSERT INTO tb_siswa Values(
   '',
   '$nis_siswa',
+  md5('$nisn_siswa'),
+  'siswa',
   '$nisn_siswa',
   '$nama_siswa',
   '$id_kelas',

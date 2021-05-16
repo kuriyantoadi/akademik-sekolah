@@ -25,22 +25,14 @@
 
               <div class="panel-body">
                 <p>Nama industri</p>
-                  <input type="text" name="nama_industri" class="form-control" value="<?= $d['nama_industri'] ?>">
+									<input type="hidden" name="id_industri" class="form-control" value="<?= $d['id_industri'] ?>">
+                  <input type="text" name="nama_industri" class="form-control" value="<?= $d['nama_industri'] ?>" required>
                 <br>
                 <p>Jenis industri</p>
-                  <input type="text" name="jenis_industri" class="form-control" value="<?= $d['nama_industri'] ?>">
+                  <input type="text" name="jenis_industri" class="form-control" value="<?= $d['jenis_industri'] ?>" required>
                 <br>
                 <p>Link industri</p>
-                  <input type="text" name="link_industri" class="form-control" value="<?= $d['nama_industri'] ?>">
-                <br>
-                <p>Kuota</p>
-                  <input type="text" name="kuota" class="form-control" value="<?= $d['nama_industri'] ?>">
-                <br>
-                <p>Tanggal Mulai Prakerin</p>
-                  <input type="text" name="nama_industri" class="form-control" value="<?= $d['nama_industri'] ?>">
-                <br>
-                <p>Tanggal Selesai Prakerin</p>
-                  <input type="text" name="nama_industri" class="form-control" value="<?= $d['nama_industri'] ?>">
+                  <input type="text" name="link_industri" class="form-control" value="<?= $d['link_industri'] ?>" required>
                 <br>
 
                 <br>

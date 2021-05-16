@@ -31,6 +31,9 @@
                   <center>Jenis Tempat industri
                 </th>
                 <th>
+                  <center>Link Industri
+                </th>
+                <th>
                   <center>Pilihan
                 </th>
               </tr>
@@ -51,6 +54,9 @@
               <td>
                 <?= $d['jenis_industri']; ?>
               </td>
+              <td>
+                <?= $d['link_industri']; ?>
+              </td>
 
               <td>
                 <center>
@@ -62,9 +68,6 @@
                   </a>
                   <a href="https://<?= $d['link_industri'] ?>">
                     <span class="label label-default">Lihat Web</span>
-                  </a>
-                  <a href="industri_lihat.php?id_industri=<?= $d['id_industri'] ?>">
-                    <span class="label label-success">Lihat</span>
                   </a>
               </td>
             </tr>
