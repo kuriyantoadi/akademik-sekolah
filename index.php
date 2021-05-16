@@ -30,8 +30,9 @@
 					<div class="left">
 						<div class="content">
 							<div class="header">
-								<div class="logo text-center"><img src="assets/img/logo-dark.png" alt="Klorofil Logo"></div>
-								<p class="lead">Silahkan Login ke Akun Anda</p>
+								<!-- <div class="logo text-center"><img src="assets/img/logo.png" alt="Sistem PKL"></div> -->
+								<h4>Sistem Informasi Prakerin</h4>
+								<h4>Silahkan Login</h4>
 							</div>
 							<form class="form-auth-small" method="post" action="cek-login.php">
                 <?php include('alert.php') ?>
@@ -54,7 +55,7 @@
 					<div class="right">
 						<div class="overlay"></div>
 						<div class="content text">
-							<h1 class="heading">Sistem Informasi PKL</h1>
+							<h1 class="heading">Sistem Informasi Prakerin</h1>
 							<p>Login untuk siswa SMK Negeri 1 Ciruas</p>
 						</div>
 					</div>

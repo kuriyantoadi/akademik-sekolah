@@ -56,6 +56,9 @@
 								<p>Kondisi</p>
 									<input type="text" name="tgl_selesai" class="form-control" value="<?= $d['kondisi'] ?>" readonly>
 								<br>
+								<p>Tanggal Konfrimasi</p>
+									<input type="text" name="tgl_selesai" class="form-control" value="<?= $d['tgl_konfirmasi'] ?>" readonly>
+								<br>
             <?php
 							  }
 								?>

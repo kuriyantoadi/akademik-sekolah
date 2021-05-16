@@ -132,10 +132,90 @@ if (isset($_GET['pesan'])) {
        <div class='alert alert-danger alert-dismissible' role='alert'>
        <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
          <div class='alert-message'>
-          Maaf, pengajuan Prakerin anda gagal. 
+          Maaf, pengajuan Prakerin anda gagal.
          </div>
        </div>
        ";
    }
+
+   elseif ($_GET['pesan'] == "konfirmasi-diijinkan-berhasil") {
+      echo "
+      <div class='alert alert-success alert-dismissible' role='alert'>
+      <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+        <div class='alert-message'>
+          Konfirmasi diijinkan Prakerin Berhasil
+        </div>
+      </div>
+      ";
+  }
+
+  elseif ($_GET['pesan'] == "konfirmasi-diijinkan-gagal") {
+     echo "
+     <div class='alert alert-danger alert-dismissible' role='alert'>
+     <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+       <div class='alert-message'>
+         Konfirmasi diijinkan Prakerin Gagal
+       </div>
+     </div>
+     ";
+ }
+
+     elseif ($_GET['pesan'] == "konfirmasi-ditolak-berhasil") {
+        echo "
+        <div class='alert alert-success alert-dismissible' role='alert'>
+        <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+          <div class='alert-message'>
+            Konfirmasi ditolak Prakerin Berhasil
+          </div>
+        </div>
+        ";
+    }
+
+
+       elseif ($_GET['pesan'] == "konfirmasi-ditolak-gagal") {
+          echo "
+          <div class='alert alert-danger alert-dismissible' role='alert'>
+          <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+            <div class='alert-message'>
+              Konfirmasi ditolak Prakerin Gagal
+            </div>
+          </div>
+          ";
+      }
+
+
+     elseif ($_GET['pesan'] == "konfirmasi_password_salah") {
+        echo "
+        <div class='alert alert-danger alert-dismissible' role='alert'>
+        <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+          <div class='alert-message'>
+            Konfirmasi Passowrd Anda Salah
+          </div>
+        </div>
+        ";
+    }
+
+
+         elseif ($_GET['pesan'] == "password_update") {
+            echo "
+            <div class='alert alert-success alert-dismissible' role='alert'>
+            <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+              <div class='alert-message'>
+                Password telah diubah
+              </div>
+            </div>
+            ";
+        }
+
+        elseif ($_GET['pesan'] == "password_update_gagal") {
+           echo "
+           <div class='alert alert-danger alert-dismissible' role='alert'>
+           <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+             <div class='alert-message'>
+              Perubahan Password Anda Gagal
+             </div>
+           </div>
+           ";
+       }
 }
 ?>

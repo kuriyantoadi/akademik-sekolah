@@ -5,6 +5,8 @@ if ($_SESSION['status'] != "siswa") {
     header("location:index.php?pesan=belum_login");
 }
 $nisn_siswa = $_SESSION['nisn_siswa'];
+$nama_siswa = $_SESSION['nama_siswa'];
+
  ?>
 
 <!doctype html>
@@ -36,7 +38,7 @@ $nisn_siswa = $_SESSION['nisn_siswa'];
 		<!-- NAVBAR -->
 		<nav class="navbar navbar-default navbar-fixed-top">
 			<div class="brand">
-				<a href="index.html"><img src="assets/img/logo-dark.png" alt="Klorofil Logo" class="img-responsive logo"></a>
+				<a href="index.php"><img src="assets/img/logo.png" alt="Sistem PKL" class="img-responsive logo"></a>
 			</div>
 			<div class="container-fluid">
 				<div class="navbar-btn">
@@ -51,8 +53,8 @@ $nisn_siswa = $_SESSION['nisn_siswa'];
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="assets/img/user.png" class="img-circle" alt="Avatar">
 								<span><?= $nisn_siswa ?></span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
 							<ul class="dropdown-menu">
-								<li><a href="#"><i class="lnr lnr-user"></i> <span>Profil Saya</span></a></li>
-								<li><a href="#"><i class="lnr lnr-cog"></i> <span>Ubah Kata Sandi</span></a></li>
+								<li><a href="profil.php"><i class="lnr lnr-user"></i> <span>Profil Saya</span></a></li>
+								<li><a href="password.php"><i class="lnr lnr-cog"></i> <span>Ubah Kata Sandi</span></a></li>
 								<li><a href="logout.php"><i class="lnr lnr-exit"></i> <span>Keluar</span></a></li>
 							</ul>
 						</li>

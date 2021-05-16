@@ -20,6 +20,10 @@ $password = md5($_POST['password']);
 // menyeleksi data admin dengan nisn_siswa dan password yang sesuai
 $data = mysqli_query($koneksi, "select * from tb_siswa where nisn_siswa='$nisn_siswa' and password='$password'");
 
+// $d = mysqli_fetch_array($data);
+// while ($d = mysqli_fetch_array($data)) {
+//    $nama_siswa = $d['nama_siswa'];
+//  }
 // menghitung jumlah data yang ditemukan
 $cek = mysqli_num_rows($data);
 
@@ -30,6 +34,7 @@ if ($cek > 0) {
 
     if ($login['status']=="siswa") {
         $_SESSION['nisn_siswa'] = $nisn_siswa;
+        // $_SESSION['nama_siswa'] = $nama_siswa;
         $_SESSION['status'] = "siswa";
         // echo "cek";
         header("location:dashboard.php");

@@ -33,7 +33,7 @@ $cek_tambah = mysqli_query($koneksi, "INSERT INTO tb_pengajuan Values('',
 
 if ($cek_tambah) {
     // echo "tambah berhasil";
-    header("location:pengajuan_form.php?pesan=pengajuan_berhasil");
+    header("location:pengajuan_form_lihat.php?pesan=pengajuan_berhasil&nisn_siswa=$nisn_siswa");
 } else {
     // echo "tambah gagal";
     header("location:industri.php?pesan=pengajuan_gagal");

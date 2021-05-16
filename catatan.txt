@@ -7,9 +7,6 @@
 - tambah kelas
 - tambah jurusan dan halaman jurusan
 
-08 mei 2021
-- crud guru (lia yg ngerjain)
-- crud prakerin (kerjain sendiri)
 
 09 mei 2021
 
@@ -21,3 +18,11 @@ belum selesai
 
 10 Mei 2021
 - pengajuan PKL
+
+16 mei 2021
+- konfirmasi pkl pada admin (ok)
+- gambar profil (ok)
+- ubah kata sandi admin dan siswa (ok)
+- lihat pengajuan dan hapus pengajuan (ok)
+- cek tambah guru dan tambah siswa di akun admin
+- ganti logo (ok)

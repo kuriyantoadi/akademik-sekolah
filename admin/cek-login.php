@@ -35,9 +35,9 @@ if ($cek > 0) {
         header("location:dashboard.php");
     } else {
         // echo "salah1";
-        header("location:login.php?pesan=login-gagal1");
+        header("location:index.php?pesan=login-gagal");
     }
 } else {
     // echo "salah2";
-    header("location:login.php?pesan=login-gagal2");
+    header("location:index.php?pesan=login-gagal");
 }

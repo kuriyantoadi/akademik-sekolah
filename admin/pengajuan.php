@@ -65,8 +65,12 @@
 
               <td>
                 <center>
-                  <a href="<?= $d['link_industri'] ?>">
-                    <span class="label label-success">Lihat Pengajuan</span>
+                  <a href="pengajuan_lihat.php?id_pengajuan=<?= $d['id_pengajuan'] ?>">
+                    <span class="label label-success">Lihat</span>
+                  </a>
+                  <a href="pengajuan_hapus.php?id_pengajuan=<?= $d['id_pengajuan'] ?>"
+                    onclick="return confirm('Anda yakin Hapus pengajuan Prakerin Siswa <?php echo $d['nama_siswa']; ?> ?')">
+                    <span class="label label-danger">Hapus</span>
                   </a>
               </td>
             </tr>
