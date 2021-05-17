@@ -39,7 +39,7 @@ $username = $_SESSION['username'];
 		<!-- NAVBAR -->
 		<nav class="navbar navbar-default navbar-fixed-top">
 			<div class="brand">
-				<a href="index.php"><img src="../assets/img/logo.png" alt="Sistem PKL" class="img-responsive logo"></a>
+				<a href="dashboard.php"><img src="../assets/img/logo.png" alt="Sistem PKL" class="img-responsive logo"></a>
 			</div>
 			<div class="container-fluid">
 				<div class="navbar-btn">

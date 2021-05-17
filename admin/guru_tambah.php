@@ -21,7 +21,7 @@
                   <input type="text" name="tgl_perubahan" class="form-control datepicker" required>
                 <br>
                 <p>Sinkronisasi Terakhir</p>
-                  <input type="text" name="sinkron_terakhir" class="form-control" required>
+                  <input type="text" name="sinkron_terakhir" class="form-control datepicker" required>
                 <br>
                 <p>Nomor Surat Tugas</p>
                   <input type="text" name="no_surat_tugas" class="form-control" required>

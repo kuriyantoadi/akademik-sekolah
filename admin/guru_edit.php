@@ -28,10 +28,10 @@
                 <p>Tanggal Perubahan</p>
                   <!-- tinggal ganti isi name dan value nya seperti yg ada di tb_guru -->
 									<input type="hidden" name="id_guru" class="form-control" value="<?= $d['id_guru'] ?>" required>
-                  <input type="text" name="tgl_perubahan" class="form-control" value="<?= $d['tgl_perubahan'] ?>" required>
+                  <input type="text" name="tgl_perubahan" class="form-control datepicker" value="<?= $d['tgl_perubahan'] ?>" required>
                 <br>
                 <p>Sinkronisasi Terakhir</p>
-                  <input type="text" name="sinkron_terakhir" class="form-control" value="<?= $d['sinkron_terakhir'] ?>" required>
+                  <input type="text" name="sinkron_terakhir" class="form-control datepicker" value="<?= $d['sinkron_terakhir'] ?>" required>
                 <br>
                 <p>Nomor Surat Tugas</p>
                   <input type="text" name="no_surat_tugas" class="form-control" value="<?= $d['no_surat_tugas'] ?>" required>
