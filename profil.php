@@ -21,7 +21,7 @@
                   $data = mysqli_query($koneksi, "SELECT * from tb_siswa, tb_kelas where tb_siswa.id_kelas=tb_kelas.id_kelas and tb_siswa.nisn_siswa='$nisn_siswa' ");
                   while ($d = mysqli_fetch_array($data)) {
                   ?>
-                  <table class="table table-bordered">
+                  <table class="table">
                       <tr>
                         <td>
                           NIS Siswa
