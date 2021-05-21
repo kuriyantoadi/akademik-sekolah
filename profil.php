@@ -17,7 +17,6 @@
 
 
                   <?php
-									echo $nisn_siswa;
                   include 'koneksi.php';
 									include "alert.php";
                   // $nisn_siswa = $_GET['nisn_siswa'];
