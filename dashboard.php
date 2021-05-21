@@ -8,7 +8,7 @@
 					<!-- <h3 class="page-title">Halaman Dashboard</h3> -->
 					<div class="panel panel-headline">
 						<div class="panel-body">
-              <center>  <?= $nama_siswa ?>
+              <center>  <?php echo $nisn_siswa ?>
 
 							<h1>Selamat Datang di Sistem Informasi Sekolah</h1>
 							<h4>Anda Berhasil Login Sebagai Siswa</h4>

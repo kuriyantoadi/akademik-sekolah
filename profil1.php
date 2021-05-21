@@ -14,8 +14,6 @@
                 <h2 style="margin-top: 30px; margin-bottom: 30px">Profil Siswa</h2>
               </center>
 
-
-
                   <?php
                   include 'koneksi.php';
 									include "alert.php";

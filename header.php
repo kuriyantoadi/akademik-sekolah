@@ -5,7 +5,6 @@ if ($_SESSION['status'] != "siswa") {
     header("location:index.php?pesan=belum_login");
 }
 $nisn_siswa = $_SESSION['nisn_siswa'];
-$nama_siswa = $_SESSION['nama_siswa'];
 
  ?>
 
@@ -33,6 +32,7 @@ $nama_siswa = $_SESSION['nama_siswa'];
 </head>
 
 <body>
+
 	<!-- WRAPPER -->
 	<div id="wrapper">
 		<!-- NAVBAR -->
