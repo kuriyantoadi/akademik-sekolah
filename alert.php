@@ -217,5 +217,27 @@ if (isset($_GET['pesan'])) {
            </div>
            ";
        }
+
+       elseif ($_GET['pesan'] == "rapot_hapus") {
+          echo "
+          <div class='alert alert-success alert-dismissible' role='alert'>
+          <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+            <div class='alert-message'>
+              Rapot Berhasil <b>Dihapus</b>
+            </div>
+          </div>
+          ";
+      }
+
+      elseif ($_GET['pesan'] == "tambah_rapot_berhasil") {
+         echo "
+         <div class='alert alert-success alert-dismissible' role='alert'>
+         <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+           <div class='alert-message'>
+             Tambah Rapot Berhasil
+           </div>
+         </div>
+         ";
+     }
 }
 ?>

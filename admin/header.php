@@ -70,16 +70,24 @@ $username = $_SESSION['username'];
 			<div class="sidebar-scroll">
 				<nav>
 					<ul class="nav">
-						<li><a href="dashboard.php" class=""><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
-						<li><a href="industri.php" class=""><i class="lnr lnr-list"></i> <span>Daftar Industri</span></a></li>
-            <li><a href="jadwal_pkl.php" class=""><i class="lnr lnr-clock"></i> <span>Jadwal Prakerin</span></a></li>
-						<li><a href="pengajuan.php" class=""><i class="lnr lnr-enter-down"></i> <span>Pengajuan Prakerin Siswa</span></a></li>
-						<li><a href="guru.php" class=""><i class="lnr lnr-user"></i> <span>Daftar Guru</span></a></li>
+            <li><a href="dashboard.php" class=""><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
+            <li>
+              <a href="#subPages" data-toggle="collapse" class="collapsed"><i class="lnr lnr-license"></i> <span>Prakerin</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+              <div id="subPages" class="collapse ">
+                <ul class="nav">
+                  <li><a href="industri.php" class=""><i class="lnr lnr-list"></i> <span>Daftar Industri</span></a></li>
+                  <li><a href="jadwal_pkl.php" class=""><i class="lnr lnr-clock"></i> <span>Jadwal Prakerin</span></a></li>
+      						<li><a href="pengajuan.php" class=""><i class="lnr lnr-enter-down"></i> <span>Pengajuan Prakerin</span></a></li>
+                </ul>
+              </div>
+            </li>
+						<li><a href="rapot.php" class=""><i class="lnr lnr-book"></i> <span>Daftar Rapot</span></a></li>
+          	<li><a href="guru.php" class=""><i class="lnr lnr-user"></i> <span>Daftar Guru</span></a></li>
 						<li><a href="siswa.php" class=""><i class="lnr lnr-users"></i> <span>Data Siswa</span></a></li>
 						<li><a href="kelas.php" class=""><i class="lnr lnr-list"></i> <span>Daftar Kelas</span></a></li>
 						<li><a href="jurusan.php" class=""><i class="lnr lnr-inbox"></i> <span>Daftar Jurusan</span></a></li>
 
-					</ul>
+          </ul>
 				</nav>
 			</div>
 		</div>

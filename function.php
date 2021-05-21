@@ -74,5 +74,75 @@ function edit_agama(){
   <option value="budha">Budha</option>
 <?php }
 
+function rapot1(){
+  if (empty($rapot1)) {
+    ?>
+    rapot Tidak Tersedia
+    <input type="file" name="rapot_sms1" accept="application/pdf" class="form-control-file" >
+  <?php  }else { ?>
+    Rapot Tersedia
+    <br><a class="btn btn-success btn-sm" href="../assets/rapot-sms1/<?= $rapot1 ?>">Download Rapot</a>
+  <?php
+  }
+}
 
+function rapot2(){
+  if (empty($rapot2)) {
+    ?>
+    rapot Tidak Tersedia
+    <input type="file" name="rapot_sms2" accept="application/pdf" class="form-control-file" >
+  <?php  }else { ?>
+    Rapot Tersedia
+    <br><a class="btn btn-success btn-sm" href="../assets/rapot-sms1/<?= $rapot2 ?>">Download Rapot</a>
+  <?php
+  }
+}
+
+function rapot3(){
+  if (empty($rapot3)) {
+    ?>
+    rapot Tidak Tersedia
+    <input type="file" name="rapot_sms3" accept="application/pdf" class="form-control-file" >
+  <?php  }else { ?>
+    Rapot Tersedia
+    <br><a class="btn btn-success btn-sm" href="../assets/rapot-sms3/<?= $rapot3 ?>">Download Rapot</a>
+  <?php
+  }
+}
+
+function rapot4(){
+  if (empty($rapot4)) {
+    ?>
+    rapot Tidak Tersedia
+    <input type="file" name="rapot_sms4" accept="application/pdf" class="form-control-file" >
+  <?php  }else { ?>
+    Rapot Tersedia
+    <br><a class="btn btn-success btn-sm" href="../assets/rapot-sms4/<?= $rapot4 ?>">Download Rapot</a>
+  <?php
+  }
+}
+
+function rapot5(){
+  if (empty($rapot5)) {
+    ?>
+    rapot Tidak Tersedia
+    <input type="file" name="rapot_sms5" accept="application/pdf" class="form-control-file" >
+  <?php  }else { ?>
+    Rapot Tersedia
+    <br><a class="btn btn-success btn-sm" href="../assets/rapot-sms5/<?= $rapot5 ?>">Download Rapot</a>
+  <?php
+  }
+}
+
+function rapot6(){
+  if (empty($rapot6)) {
+    ?>
+    rapot Tidak Tersedia
+    <input type="file" name="rapot_sms6" accept="application/pdf" class="form-control-file" >
+  <?php  }else { ?>
+    Rapot Tersedia
+    <br><a class="btn btn-success btn-sm" href="../assets/rapot-sms6/<?= $rapot6 ?>">Download Rapot</a>
+  <?php
+  }
+}
  ?>

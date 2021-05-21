@@ -70,9 +70,9 @@ $nisn_siswa = $_SESSION['nisn_siswa'];
 				<nav>
 					<ul class="nav">
 						<li><a href="dashboard.php" class=""><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
-						<li><a href="industri.php" class=""><i class="lnr lnr-list"></i> <span>Daftar Industri</span></a></li>
+            <li><a href="rapot.php?nisn_siswa=<?= $nisn_siswa ?>" class=""><i class="lnr lnr-book"></i> <span>Rapot</span></a></li>
+          	<li><a href="industri.php" class=""><i class="lnr lnr-list"></i> <span>Daftar Industri</span></a></li>
             <li><a href="pengajuan_form_lihat.php?nisn_siswa=<?= $nisn_siswa ?>" class=""><i class="lnr lnr-upload"></i> <span>Form Pengajuan Prakerin</span></a></li>
-
 					</ul>
 				</nav>
 			</div>

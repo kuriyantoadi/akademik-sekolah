@@ -26,3 +26,6 @@ belum selesai
 - lihat pengajuan dan hapus pengajuan (ok)
 - cek tambah guru dan tambah siswa di akun admin (ok)
 - ganti logo (ok)
+
+21 mei 2021
+- upload rapot => pembuatan tampilan upload rapot guru

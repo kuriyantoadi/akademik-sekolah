@@ -73,7 +73,13 @@ $cek_tambah = mysqli_query($koneksi, "INSERT INTO tb_siswa Values(
   '$nama_wali',
   '$alamat_wali',
   '$no_hp_wali',
-  '$pekerjaan_wali')");
+  '$pekerjaan_wali'
+  '',
+  '',
+  '',
+  '',
+  '',
+  '')");
 
 if ($cek_tambah) {
     // echo "tambah berhasil";
