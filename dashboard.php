@@ -54,16 +54,6 @@
                 <?= $d['nama_industri']; ?>
               </td>
               <td>
-                <?= $d['jenis_industri']; ?>
-              </td>
-              <td><center>
-                <?= $d['kuota']; ?>
-              </td>
-              <td><center>
-                <?= $d['status']; ?>
-              </td>
-
-              <td>
                 <center>
 
                   <a href="https://<?= $d['link_industri'] ?>">
