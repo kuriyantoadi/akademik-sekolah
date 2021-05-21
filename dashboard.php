@@ -26,15 +26,6 @@
                   <center>Nama Tempat industri
                 </th>
                 <th>
-                  <center>Jenis Tempat industri
-                </th>
-                <th>
-                  <center>Kuota
-                </th>
-                <th>
-                  <center>Status
-                </th>
-                <th>
                   <center>Pilihan
                 </th>
               </tr>
