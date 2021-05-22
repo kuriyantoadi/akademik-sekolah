@@ -28,4 +28,10 @@ belum selesai
 - ganti logo (ok)
 
 21 mei 2021
-- upload rapot => pembuatan tampilan upload rapot guru
+- upload rapot (ok)
+
+22 mei 2021
+- upload materi (proses)
+
+23 mei 2021
+- tambah mapel (ok)

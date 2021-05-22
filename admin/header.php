@@ -86,7 +86,8 @@ $username = $_SESSION['username'];
 						<li><a href="siswa.php" class=""><i class="lnr lnr-users"></i> <span>Data Siswa</span></a></li>
 						<li><a href="kelas.php" class=""><i class="lnr lnr-list"></i> <span>Daftar Kelas</span></a></li>
 						<li><a href="jurusan.php" class=""><i class="lnr lnr-inbox"></i> <span>Daftar Jurusan</span></a></li>
-
+            <li><a href="mapel.php" class=""><i class="lnr lnr-alarm"></i> <span>Daftar Mapel</span></a></li>
+            <li><a href="materi.php" class=""><i class="lnr lnr-bullhorn"></i> <span>Daftar Materi</span></a></li>
           </ul>
 				</nav>
 			</div>
