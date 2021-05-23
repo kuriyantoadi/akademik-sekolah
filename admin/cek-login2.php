@@ -18,12 +18,13 @@ $password = md5($_POST['password']);
 
 
 // menyeleksi data admin dengan nisn dan password yang sesuai
-$data = mysqli_query($koneksi, "select * from tb_guru where username='$username' and password='$password'");
+$data = mysqli_query($koneksi, "select * from tb_user where username='$username' and password='$password'");
 
 // menghitung jumlah data yang ditemukan
 $cek = mysqli_num_rows($data);
 
 // echo "cek2";
+
 if ($cek > 0) {
     $login = mysqli_fetch_assoc($data);
 
@@ -32,15 +33,11 @@ if ($cek > 0) {
         $_SESSION['status'] = "admin";
         // echo "cek";
         header("location:dashboard.php");
-    } elseif ($login['status']=="guru") {
-       $_SESSION['username'] = $username;
-       $_SESSION['status'] = "guru";
-       header("location:../guru/dashboard.php");
     } else {
         // echo "salah1";
-        header("location:index.php?pesan=gagal1");
+        header("location:index.php?pesan=login-gagal");
     }
 } else {
     // echo "salah2";
-    header("location:index.php?pesan=gagal");
+    header("location:index.php?pesan=login-gagal");
 }

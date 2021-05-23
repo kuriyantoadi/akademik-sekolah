@@ -12,11 +12,10 @@ if (isset($_GET['pesan'])) {
         ";
     }elseif ($_GET['pesan'] == "belum_login") {
         echo "
-        <div class='alert alert-warning alert-dismissible' role='alert'>
-          <button type='button' class='close' data-dismiss='alert' aria-label='Close'></button>
-          <div class='alert-message'>
-            Anda belum login
-          </div>
+        <div class='alert alert-danger alert-dismissible' role='alert'>
+          <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+          <i class='fa fa-check-circle'></i>
+          Login gagal, silahkan login lagi
         </div>
 
         ";

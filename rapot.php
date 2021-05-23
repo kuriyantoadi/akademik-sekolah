@@ -54,7 +54,6 @@
 														if (empty($rapot1)) {
 															?>
 															rapot Tidak Tersedia
-															<input type="file" name="rapot_sms1" accept="application/pdf" class="form-control-file" >
 														<?php  }else { ?>
 															Rapot Tersedia
 															<br>
@@ -72,7 +71,6 @@
 														if (empty($rapot2)) {
 															?>
 															rapot Tidak Tersedia
-															<input type="file" name="rapot_sms2" accept="application/pdf" class="form-control-file" >
 														<?php  }else { ?>
 															Rapot Tersedia
 															<br>
@@ -90,7 +88,6 @@
 														if (empty($rapot3)) {
 															?>
 															rapot Tidak Tersedia
-															<input type="file" name="rapot_sms3" accept="application/pdf" class="form-control-file" >
 														<?php  }else { ?>
 															Rapot Tersedia
 															<br>
@@ -108,7 +105,6 @@
 														if (empty($rapot4)) {
 															?>
 															rapot Tidak Tersedia
-															<input type="file" name="rapot_sms4" accept="application/pdf" class="form-control-file" >
 														<?php  }else { ?>
 															Rapot Tersedia
 															<br>
@@ -126,7 +122,6 @@
 														if (empty($rapot5)) {
 															?>
 															rapot Tidak Tersedia
-															<input type="file" name="rapot_sms5" accept="application/pdf" class="form-control-file" >
 														<?php  }else { ?>
 															Rapot Tersedia
 															<br>
@@ -144,7 +139,6 @@
 														if (empty($rapot6)) {
 															?>
 															rapot Tidak Tersedia
-															<input type="file" name="rapot_sms6" accept="application/pdf" class="form-control-file" >
 														<?php  }else { ?>
 															Rapot Tersedia
 															<br>
