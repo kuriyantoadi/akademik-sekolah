@@ -6,6 +6,15 @@ if ($_SESSION['status'] != "siswa") {
 }
 $nisn_siswa = $_SESSION['nisn_siswa'];
 
+include 'koneksi.php';
+$cek_id = mysqli_query($koneksi, "SELECT * from tb_siswa, tb_kelas where (tb_kelas.id_kelas=tb_siswa.id_kelas) AND nisn_siswa='$nisn_siswa' ");
+while ($d_id = mysqli_fetch_array($cek_id)) {
+  $id_siswa =  $d_id['id_siswa'];
+  $id_kelas =  $d_id['id_kelas'];
+  $tingkat = $d_id['tingkat'];
+}
+
+
  ?>
 
 <!doctype html>
@@ -70,9 +79,15 @@ $nisn_siswa = $_SESSION['nisn_siswa'];
 				<nav>
 					<ul class="nav">
 						<li><a href="dashboard.php" class=""><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
+            <li><a href="mapel.php" class=""><i class="lnr lnr-enter"></i> <span>Mata Pelajaran</span></a></li>
             <li><a href="rapot.php?nisn_siswa=<?= $nisn_siswa ?>" class=""><i class="lnr lnr-book"></i> <span>Rapot</span></a></li>
-          	<li><a href="industri.php" class=""><i class="lnr lnr-list"></i> <span>Daftar Industri</span></a></li>
-            <li><a href="pengajuan_form_lihat.php?nisn_siswa=<?= $nisn_siswa ?>" class=""><i class="lnr lnr-upload"></i> <span>Form Pengajuan Prakerin</span></a></li>
+            <?php if ($tingkat == 'XI') { ?>
+              <li><a href="industri.php" class=""><i class="lnr lnr-list"></i> <span>Daftar Industri</span></a></li>
+              <li><a href="pengajuan_form_lihat.php?nisn_siswa=<?= $nisn_siswa ?>" class=""><i class="lnr lnr-upload"></i> <span>Form Pengajuan Prakerin</span></a></li>
+            <?php }else {
+
+            } ?>
+
 					</ul>
 				</nav>
 			</div>

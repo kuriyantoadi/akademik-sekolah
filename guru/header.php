@@ -5,6 +5,14 @@ if ($_SESSION['status'] != "guru") {
     header("location:index.php?pesan=belum_login");
 }
 $username = $_SESSION['username'];
+include '../koneksi.php';
+
+$cek_id = mysqli_query($koneksi, "SELECT * from tb_guru where username='$username' ");
+while ($d_id = mysqli_fetch_array($cek_id)) {
+  $id_guru =  $d_id['id_guru'];
+}
+
+
  ?>
 
 <!doctype html>
@@ -71,8 +79,7 @@ $username = $_SESSION['username'];
 				<nav>
 					<ul class="nav">
             <li><a href="dashboard.php" class=""><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
-						<li><a href="rapot.php" class=""><i class="lnr lnr-book"></i> <span>Mata Pelajaran</span></a></li>
-          	<li><a href="guru.php" class=""><i class="lnr lnr-file-add"></i> <span>Tambah Materi Baru</span></a></li>
+						<li><a href="mapel.php" class=""><i class="lnr lnr-book"></i> <span>Mata Pelajaran</span></a></li>
 
           </ul>
 				</nav>

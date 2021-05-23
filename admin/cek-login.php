@@ -23,6 +23,10 @@ $data = mysqli_query($koneksi, "select * from tb_guru where username='$username'
 // menghitung jumlah data yang ditemukan
 $cek = mysqli_num_rows($data);
 
+// while ($d = mysqli_fetch_array($data)) {
+//   $id_guru = $d['id_guru'];
+// }
+
 // echo "cek2";
 if ($cek > 0) {
     $login = mysqli_fetch_assoc($data);
@@ -30,17 +34,26 @@ if ($cek > 0) {
     if ($login['status']=="admin") {
         $_SESSION['username'] = $username;
         $_SESSION['status'] = "admin";
-        // echo "cek";
+        echo "cek";
         header("location:dashboard.php");
     } elseif ($login['status']=="guru") {
        $_SESSION['username'] = $username;
        $_SESSION['status'] = "guru";
+
+       while ($d = mysqli_fetch_array($data)) {
+         $id_guru = $d['id_guru'];
+         $_SESSION['id_guru'] = $id_guru;
+         // echo $id_guru;
+         // echo $username;
+      }
+
+       echo "cek";
        header("location:../guru/dashboard.php");
     } else {
-        // echo "salah1";
-        header("location:index.php?pesan=gagal1");
+        echo "salah1";
+        // header("location:index.php?pesan=gagal1");
     }
 } else {
-    // echo "salah2";
-    header("location:index.php?pesan=gagal");
+    echo "salah2";
+    // header("location:index.php?pesan=gagal");
 }

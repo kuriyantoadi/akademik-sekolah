@@ -34,7 +34,6 @@ if ($cek > 0) {
 
     if ($login['status']=="siswa") {
         $_SESSION['nisn_siswa'] = $nisn_siswa;
-        // $_SESSION['nama_siswa'] = $nama_siswa;
         $_SESSION['status'] = "siswa";
         // echo "cek";
         header("location:dashboard.php");

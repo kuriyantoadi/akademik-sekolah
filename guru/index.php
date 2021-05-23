@@ -1,5 +1,5 @@
 <?php
 
-header("location:../admin/index.php?pesan=belum_login");
+header("location:../admin/index.php?pesan=login-gagal");
 
  ?>

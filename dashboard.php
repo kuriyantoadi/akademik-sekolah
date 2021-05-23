@@ -12,6 +12,7 @@
 
 							<h1>Selamat Datang di Sistem Informasi Sekolah</h1>
 							<h4>Anda Berhasil Login Sebagai Siswa</h4>
+
 						</div>
 					</div>
 				</div>
