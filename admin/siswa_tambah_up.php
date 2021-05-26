@@ -10,7 +10,7 @@ $nis_siswa = $_POST['nis_siswa'];
 $nisn_siswa = $_POST['nisn_siswa'];
 $nama_siswa = $_POST['nama_siswa'];
 $id_kelas = $_POST['id_kelas'];
-$jurusan = $_POST['jurusan'];
+// $jurusan = $_POST['jurusan'];
 $jk = $_POST['jk'];
 $tempat_lahir = $_POST['tempat_lahir'];
 $tgl_lahir = $_POST['tgl_lahir'];
@@ -73,7 +73,7 @@ $cek_tambah = mysqli_query($koneksi, "INSERT INTO tb_siswa Values(
   '$nama_wali',
   '$alamat_wali',
   '$no_hp_wali',
-  '$pekerjaan_wali'
+  '$pekerjaan_wali',
   '',
   '',
   '',
