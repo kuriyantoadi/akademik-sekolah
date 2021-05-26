@@ -15,6 +15,10 @@ $nama_guru = $_POST['nama_guru'];
 if ($_POST['upload']) {
 
       //proses upload
+      $nama_materi_ok = preg_replace("/\s+/", "_", $nama_materi);
+      $nama_guru_ok = preg_replace("/\s+/", "_", $nama_guru);
+
+
       $ekstensi_diperbolehkan = array('pdf');
       date_default_timezone_set('Asia/Jakarta');
       $tgl = date('d-m-Y  H:i' );
@@ -25,7 +29,7 @@ if ($_POST['upload']) {
       $file_tmp = $_FILES['file_materi']['tmp_name'];
       if (in_array($ekstensi, $ekstensi_diperbolehkan) === true) {
           if ($ukuran < 1500000) {
-              move_uploaded_file($file_tmp, '../assets/file_materi/'.'file_materi-'.$nama_guru.'-'.$nama_materi.'.pdf');
+              move_uploaded_file($file_tmp, '../assets/file_materi/'.'file_materi-'.$nama_guru_ok.'-'.$nama_materi_ok.'.pdf');
           } else {
               echo 'file_materi';
               echo 'UKURAN FILE TERLALU BESAR';
@@ -43,8 +47,8 @@ if ($_POST['upload']) {
 $cek_materi = mysqli_query($koneksi, "INSERT INTO tb_materi Values(
               '',
               '$id_mapel',
-              '$nama_materi',
-              'file_materi-$nama_guru-$nama_materi.pdf',
+              '$nama_materi_ok',
+              'file_materi-$nama_guru_ok-$nama_materi_ok.pdf',
               '$tgl') ");
 
 if ($cek_materi) {

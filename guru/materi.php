@@ -72,9 +72,9 @@
                   <a href="materi_hapus.php?file_materi=<?= $d['file_materi'] ?>&id_materi=<?= $d['id_materi'] ?>&id_mapel=<?= $d['id_mapel'] ?>" onclick="return confirm('Anda yakin Hapus data Materi <?php echo $d['nama_materi']; ?> ?')">
                     <span class="label label-danger">Hapus</span>
                   </a>
-                  <a href="materi_edit.php?id_materi=<?= $d['id_materi'] ?>">
+                  <!-- <a href="materi_edit.php?id_materi=<?= $d['id_materi'] ?>">
                     <span class="label label-primary">Edit</span>
-                  </a>
+                  </a> -->
                   <a href="../assets/file_materi/<?= $d['file_materi'] ?>">
                     <span class="label label-success">Download</span>
                   </a>

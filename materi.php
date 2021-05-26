@@ -68,8 +68,8 @@
 
               <td>
                 <center>
-                
-                  <a href="../assets/file_materi/<?= $d['file_materi'] ?>">
+
+                  <a href="assets/file_materi/<?= $d['file_materi'] ?>">
                     <span class="label label-success">Download</span>
                   </a>
 
