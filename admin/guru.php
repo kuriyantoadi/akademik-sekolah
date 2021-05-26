@@ -72,6 +72,9 @@
                               <a href="guru_detail.php?id_guru=<?php echo $d['id_guru'] ?>">
                                 <span class="label label-success">Detail</span>
                               </a>
+															<a href="guruAkun.php?id_guru=<?php echo $d['id_guru'] ?>">
+                                <span class="label label-warning">Akun</span>
+                              </a>
                           </td>
                       </tr>
                   <?php

@@ -50,10 +50,10 @@ if ($cek > 0) {
        echo "cek";
        header("location:../guru/dashboard.php");
     } else {
-        echo "salah1";
-        // header("location:index.php?pesan=gagal1");
+        // echo "salah1";
+        header("location:index.php?pesan=gagal1");
     }
 } else {
-    echo "salah2";
-    // header("location:index.php?pesan=gagal");
+    // echo "salah2";
+    header("location:index.php?pesan=gagal");
 }

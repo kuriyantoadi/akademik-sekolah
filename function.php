@@ -82,4 +82,10 @@ function s_guru(){
       <option value="<?= $g['id_guru'] ?>"> <?= $g['nama_guru'] ?> </option>
   <?php }
 }
+
+function s_status(){ ?>
+  <option value="admin">admin</option>
+  <option value="guru">guru</option>
+  <?php
+}
  ?>
