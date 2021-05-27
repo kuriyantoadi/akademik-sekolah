@@ -21,7 +21,7 @@ while ($d_id = mysqli_fetch_array($cek_id)) {
 <html lang="en">
 
 <head>
-	<title>Sistem Informasi PKL</title>
+	<title>Sistem Informasi Akademik</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -47,7 +47,7 @@ while ($d_id = mysqli_fetch_array($cek_id)) {
 		<!-- NAVBAR -->
 		<nav class="navbar navbar-default navbar-fixed-top">
 			<div class="brand">
-				<a href="dashboard.php"><img src="assets/img/logo.png" alt="Sistem PKL" class="img-responsive logo"></a>
+				<a href="dashboard.php"><img src="assets/img/logo-bg.png" alt="Sistem Informasi Akademik" class="img-responsive logo"></a>
 			</div>
 			<div class="container-fluid">
 				<div class="navbar-btn">
