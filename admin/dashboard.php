@@ -9,7 +9,7 @@
 					<div class="panel panel-headline">
 						<div class="panel-body">
               <center>
-							<h1>Selamat Datang di Sistem Informasi Sekolah</h1>
+							<h1>Selamat Datang di Sistem Informasi Akademik Sekolah</h1>
 							<h4>Anda Berhasil Login Sebagai Admin</h4>
 						</div>
 					</div>

@@ -30,7 +30,7 @@
 					<div class="left">
 						<div class="content">
 							<div class="header">
-								<h4>Sistem Informasi Prakerin</h4>
+								<h4>Sistem Informasi Akademik Sekolah</h4>
 								<h4>Silahkan Login sebagai Admin</h4>
 							</div>
 							<form class="form-auth-small" method="post" action="cek-login.php">
@@ -54,8 +54,8 @@
 					<div class="right">
 						<div class="overlay"></div>
 						<div class="content text">
-							<h1 class="heading">Sistem Informasi Prakerin</h1>
-							<p>Login untuk Admin SMK Negeri 1 Ciruas</p>
+							<h1 class="heading">Sistem Informasi Akademik</h1>
+							<p>Login untuk Guru dan Admin SMK Negeri 1 Ciruas</p>
 						</div>
 					</div>
 					<div class="clearfix"></div>
