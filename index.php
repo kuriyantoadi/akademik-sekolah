@@ -31,7 +31,7 @@
 						<div class="content">
 							<div class="header">
 								<!-- <div class="logo text-center"><img src="assets/img/logo.png" alt="Sistem PKL"></div> -->
-								<h4>Sistem Informasi Prakerin</h4>
+								<h4>Sistem Informasi Akademik</h4>
 								<h4>Silahkan Login</h4>
 							</div>
 							<form class="form-auth-small" method="post" action="cek-login.php">
@@ -55,7 +55,7 @@
 					<div class="right">
 						<div class="overlay"></div>
 						<div class="content text">
-							<h1 class="heading">Sistem Informasi Prakerin</h1>
+							<h1 class="heading">Sistem Informasi Akademik</h1>
 							<p>Login untuk siswa SMK Negeri 1 Ciruas</p>
 						</div>
 					</div>
