@@ -34,7 +34,7 @@ if ($cek > 0) {
     if ($login['status']=="admin") {
         $_SESSION['username'] = $username;
         $_SESSION['status'] = "admin";
-        echo "cek";
+        // echo "cek";
         header("location:dashboard.php");
     } elseif ($login['status']=="guru") {
        $_SESSION['username'] = $username;
@@ -47,7 +47,7 @@ if ($cek > 0) {
          // echo $username;
       }
 
-       echo "cek";
+       // echo "cek";
        header("location:../guru/dashboard.php");
     } else {
         // echo "salah1";
