@@ -81,6 +81,7 @@ while ($d_id = mysqli_fetch_array($cek_id)) {
 						<li><a href="dashboard.php" class=""><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
             <li><a href="mapel.php" class=""><i class="lnr lnr-enter"></i> <span>Mata Pelajaran</span></a></li>
             <li><a href="rapot.php?nisn_siswa=<?= $nisn_siswa ?>" class=""><i class="lnr lnr-book"></i> <span>Rapot</span></a></li>
+            <li><a href="https://smkn1ciruas.sch.id/wp/" class=""><i class="lnr lnr-phone-handset"></i> <span>Konseling</span></a></li>
             <?php if ($tingkat == 'XI') { ?>
               <li><a href="industri.php" class=""><i class="lnr lnr-list"></i> <span>Daftar Industri</span></a></li>
               <li><a href="pengajuan_form_lihat.php?nisn_siswa=<?= $nisn_siswa ?>" class=""><i class="lnr lnr-upload"></i> <span>Form Pengajuan Prakerin</span></a></li>
