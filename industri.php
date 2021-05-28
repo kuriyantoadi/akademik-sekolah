@@ -25,9 +25,7 @@
                 <th>
                   <center>Nama Tempat industri
                 </th>
-                <th>
-                  <center>Jenis Tempat industri
-                </th>
+
                 <th>
                   <center>Kuota
                 </th>
@@ -53,9 +51,7 @@
               <td>
                 <?= $d['nama_industri']; ?>
               </td>
-              <td>
-                <?= $d['jenis_industri']; ?>
-              </td>
+            
               <td><center>
                 <?= $d['kuota']; ?>
               </td>
