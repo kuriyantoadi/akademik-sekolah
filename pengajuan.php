@@ -1,5 +1,5 @@
 <?php include('header.php') ?>
-<?php include('../function.php') ?>
+<?php include('function.php') ?>
 
 <!-- END LEFT SIDEBAR -->
 <!-- MAIN -->
@@ -11,11 +11,10 @@
       <div class="panel panel-headline">
         <div class="panel-body">
           <center>
-            <h2 style="margin-top: 30px">Daftar Materi </h2>
+            <h2 style="margin-top: 30px; margin-bottom: 50px">Daftar Siswa Prakerin</h2>
           </center>
 
-          <?php include('../alert.php') ?>
-
+          <?php include('alert.php') ?>
 
           <table class="table table-bordered table-hover" id="example">
             <thead>
@@ -24,25 +23,26 @@
                   <center>No
                 </th>
                 <th>
-                  <center>Tanggal Upload
+                  <center>Nama Siswa
                 </th>
                 <th>
-                  <center>Mata Pelajaran
+                  <center>Tempat Prakerin
                 </th>
                 <th>
-                  <center>Nama Guru
+                  <center>Tanggal Pengajuan
                 </th>
                 <th>
-                  <center>Kelas
+                  <center>Kondisi
                 </th>
 
               </tr>
             </thead>
             <?php
-                    include '../koneksi.php';
+                    include 'koneksi.php';
                     $no = 1;
-                    $data = mysqli_query($koneksi, "SELECT * from tb_mapel, tb_guru, tb_kelas, tb_materi
-                      WHERE (tb_mapel.id_guru=tb_guru.id_guru) AND (tb_mapel.id_kelas=tb_kelas.id_kelas) AND (tb_materi.id_mapel=tb_mapel.id_mapel)  ");
+                    $data = mysqli_query($koneksi, "SELECT * from tb_pengajuan, tb_industri, tb_siswa
+                      where tb_pengajuan.id_industri=tb_industri.id_industri
+                      and tb_siswa.nisn_siswa=tb_pengajuan.nisn_siswa and tb_pengajuan.kondisi='Di ijinkan'");
                     while ($d = mysqli_fetch_array($data)) {
                     ?>
             <tr>
@@ -50,17 +50,18 @@
                 <center><?php echo $no++ ?>
               </td>
               <td>
-                <?= $d['tgl_upload']; ?>
+                <?= $d['nama_siswa']; ?>
               </td>
               <td>
-                <?= $d['nama_mapel']; ?>
-              </td>
-              <td>
-                <?= $d['nama_guru']; ?>
+                <?= $d['nama_industri']; ?>
               </td>
               <td><center>
-                <?= $d['tingkat'].' '.$d['jurusan'].' '.$d['kode_kelas'] ?>
+                <?= $d['tgl_pengajuan']; ?>
               </td>
+              <td><center>
+                <?= $d['kondisi']; ?>
+              </td>
+
 
             </tr>
 
