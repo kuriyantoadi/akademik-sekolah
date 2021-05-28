@@ -10,7 +10,7 @@
 						<div class="panel-body">
               <center>
 
-							<h1>Selamat Datang di Sistem Informasi Sekolah</h1>
+							<h1>Selamat Datang di Sistem Informasi Akademik</h1>
 							<h4>Anda Berhasil Login Sebagai Siswa</h4>
 
 						</div>
