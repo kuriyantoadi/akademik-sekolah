@@ -62,7 +62,7 @@ while ($d_id = mysqli_fetch_array($cek_id)) {
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="assets/img/user.png" class="img-circle" alt="Avatar">
 								<span><?= $nisn_siswa ?></span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
 							<ul class="dropdown-menu">
-								<li><a href="profil.php"><i class="lnr lnr-user"></i> <span>Profil Saya</span></a></li>
+								<!-- <li><a href="profil.php"><i class="lnr lnr-user"></i> <span>Profil Saya</span></a></li> -->
 								<li><a href="password.php"><i class="lnr lnr-cog"></i> <span>Ubah Kata Sandi</span></a></li>
 								<li><a href="logout.php"><i class="lnr lnr-exit"></i> <span>Keluar</span></a></li>
 							</ul>
@@ -79,7 +79,8 @@ while ($d_id = mysqli_fetch_array($cek_id)) {
 				<nav>
 					<ul class="nav">
 						<li><a href="dashboard.php" class=""><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
-            <li><a href="mapel.php" class=""><i class="lnr lnr-enter"></i> <span>Mata Pelajaran</span></a></li>
+            <li><a href="profil.php" class=""><i class="lnr lnr-user"></i> <span>Profil Saya</span></a></li>
+            <li><a href="mapel.php" class=""><i class="lnr lnr-enter"></i> <span>Materi Pelajaran</span></a></li>
             <li><a href="rapot.php?nisn_siswa=<?= $nisn_siswa ?>" class=""><i class="lnr lnr-book"></i> <span>Rapot</span></a></li>
             <li><a href="https://smkn1ciruas.sch.id/wp/" class=""><i class="lnr lnr-phone-handset"></i> <span>Konseling</span></a></li>
             <?php if ($tingkat == 'XI') { ?>
@@ -88,7 +89,6 @@ while ($d_id = mysqli_fetch_array($cek_id)) {
             <?php }else {
 
             } ?>
-
 					</ul>
 				</nav>
 			</div>
