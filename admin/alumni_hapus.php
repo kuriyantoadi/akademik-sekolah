@@ -7,15 +7,15 @@ session_start();
 if ($_SESSION['status'] != "admin") {
     header("location:index.php?pesan=belum_login");
 }
-$id_guru = $_GET['id_guru'];
+$id_alumni = $_GET['id_alumni'];
 // menghapus data dari database
-$cek_hapus = mysqli_query($koneksi, "delete from tb_guru where id_guru='$id_guru' ");
+$cek_hapus = mysqli_query($koneksi, "delete from tb_alumni where id_alumni='$id_alumni' ");
 
 // mengalihkan halaman kembali ke index.php
 if ($cek_hapus) {
     // echo "hapus berhasil";
-    header("location:guru.php?pesan=hapus-berhasil");
+    header("location:alumni.php?pesan=hapus-berhasil");
 } else {
     // echo "hapus gagal";
-    header("location:guru.php?pesan=hapus-gagal");
+    header("location:alumni.php?pesan=hapus-gagal");
 }

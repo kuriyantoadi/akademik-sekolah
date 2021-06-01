@@ -40,7 +40,15 @@
 				<div id="navbar-menu">
 					<ul class="nav navbar-nav navbar-right">
 
-
+						<!-- <li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="assets/img/user.png" class="img-circle" alt="Avatar">
+                <span><?php echo $username ?></span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
+							<ul class="dropdown-menu">
+								<!-- <li><a href="#"><i class="lnr lnr-user"></i> <span>Profil Saya</span></a></li> -->
+								<li><a href="password.php"><i class="lnr lnr-cog"></i> <span>Ubah Kata Sandi</span></a></li>
+								<li><a href="logout.php"><i class="lnr lnr-exit"></i> <span>Keluar</span></a></li>
+							</ul>
+						</li> -->
 
 					</ul>
 				</div>
@@ -52,7 +60,7 @@
 			<div class="sidebar-scroll">
 				<nav>
 					<ul class="nav">
-            <li><a href="index.php" class=""><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
+            <li><a href="dashboard.php" class=""><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
             <li>
               <a href="#subPages" data-toggle="collapse" class="collapsed"><i class="lnr lnr-license"></i> <span>Prakerin</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
               <div id="subPages" class="collapse ">
@@ -64,13 +72,13 @@
               </div>
             </li>
             <li><a href="alumni.php" class=""><i class="lnr lnr-chart-bars"></i> <span>Daftar Alumni</span></a></li>
-						<!-- <li><a href="rapot.php" class=""><i class="lnr lnr-book"></i> <span>Daftar Rapot</span></a></li> -->
+						<li><a href="rapot.php" class=""><i class="lnr lnr-book"></i> <span>Daftar Rapot</span></a></li>
           	<li><a href="guru.php" class=""><i class="lnr lnr-user"></i> <span>Daftar Guru</span></a></li>
 						<li><a href="siswa.php" class=""><i class="lnr lnr-users"></i> <span>Data Siswa</span></a></li>
 						<li><a href="kelas.php" class=""><i class="lnr lnr-list"></i> <span>Daftar Kelas</span></a></li>
 						<li><a href="jurusan.php" class=""><i class="lnr lnr-inbox"></i> <span>Daftar Jurusan</span></a></li>
-            <!-- <li><a href="mapel.php" class=""><i class="lnr lnr-alarm"></i> <span>Daftar Mapel</span></a></li> -->
-            <!-- <li><a href="materi.php" class=""><i class="lnr lnr-bullhorn"></i> <span>Daftar Materi</span></a></li> -->
+            <li><a href="mapel.php" class=""><i class="lnr lnr-alarm"></i> <span>Daftar Mapel</span></a></li>
+            <li><a href="materi.php" class=""><i class="lnr lnr-bullhorn"></i> <span>Daftar Materi</span></a></li>
           </ul>
 				</nav>
 			</div>

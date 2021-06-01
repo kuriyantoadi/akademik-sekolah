@@ -11,7 +11,7 @@
       <div class="panel panel-headline">
         <div class="panel-body">
           <center>
-            <h2 style="margin-top: 30px">Daftar Industri</h2>
+            <h2 style="margin-top: 30px">Jadwal Prakerin</h2>
           </center>
 
           <?php include('alert.php') ?>
@@ -24,13 +24,19 @@
                   <center>No
                 </th>
                 <th>
-                  <center>Nama Tempat industri
+                  <center>Nama Tempat Prakerin
                 </th>
                 <th>
-                  <center>Jenis Tempat industri
+                  <center>Tanggal Mulai
                 </th>
                 <th>
-                  <center>Link Industri
+                  <center>Tanggal Selesai
+                </th>
+                <th>
+                  <center>Kouta
+                </th>
+                <th>
+                  <center>Status
                 </th>
               
               </tr>
@@ -38,7 +44,7 @@
             <?php
                     include 'koneksi.php';
                     $no = 1;
-                    $data = mysqli_query($koneksi, "SELECT * from tb_industri ");
+                    $data = mysqli_query($koneksi, "SELECT * from tb_jadwal_pkl,tb_industri where tb_industri.id_industri=tb_jadwal_pkl.id_industri ");
                     while ($d = mysqli_fetch_array($data)) {
                     ?>
             <tr>
@@ -49,11 +55,18 @@
                 <?= $d['nama_industri']; ?>
               </td>
               <td>
-                <?= $d['jenis_industri']; ?>
+                <?= $d['tgl_mulai']; ?>
               </td>
-              <td>
-                <?= $d['link_industri']; ?>
+              <td><center>
+                <?= $d['tgl_selesai']; ?>
               </td>
+              <td><center>
+                <?= $d['kuota']; ?>
+              </td>
+              <td><center>
+                <?= $d['status']; ?>
+              </td>
+
 
             </tr>
 

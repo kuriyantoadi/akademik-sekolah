@@ -1,5 +1,5 @@
 <?php include('header.php') ?>
-<?php include('function.php') ?>
+<?php include('../function.php') ?>
 
 		<!-- END LEFT SIDEBAR -->
 		<!-- MAIN -->
@@ -16,7 +16,7 @@
 
               <form class="" action="password_up.php" method="post">
               <div class="panel-body">
-                <?php include 'alert.php'; ?>
+                <?php include '../alert.php'; ?>
                 <p>NISN</p>
                   <input type="text" name="nisn_siswa" class="form-control" value="<?= $nisn_siswa ?>" readonly>
                 <br>

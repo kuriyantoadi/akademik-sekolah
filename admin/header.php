@@ -81,6 +81,7 @@ $username = $_SESSION['username'];
                 </ul>
               </div>
             </li>
+            <li><a href="alumni.php" class=""><i class="lnr lnr-chart-bars"></i> <span>Daftar Alumni</span></a></li>
 						<li><a href="rapot.php" class=""><i class="lnr lnr-book"></i> <span>Daftar Rapot</span></a></li>
           	<li><a href="guru.php" class=""><i class="lnr lnr-user"></i> <span>Daftar Guru</span></a></li>
 						<li><a href="siswa.php" class=""><i class="lnr lnr-users"></i> <span>Data Siswa</span></a></li>

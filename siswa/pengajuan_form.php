@@ -1,5 +1,5 @@
 <?php include('header.php') ?>
-<?php include('function.php') ?>
+<?php include('../function.php') ?>
 
 		<!-- END LEFT SIDEBAR -->
 		<!-- MAIN -->
@@ -15,7 +15,7 @@
               </div>
 
               <?php
-              include 'koneksi.php';
+              include '../koneksi.php';
               $id_jadwal_pkl = $_GET['id_jadwal_pkl'];
               $jdw_db = mysqli_query($koneksi, "SELECT * from tb_industri, tb_jadwal_pkl where tb_industri.id_industri=tb_jadwal_pkl.id_industri and id_jadwal_pkl='$id_jadwal_pkl' ");
               while ($jdw = mysqli_fetch_array($jdw_db)) {
@@ -27,7 +27,7 @@
 
               <form class="" action="pengajuan_form_up.php" method="post">
               <div class="panel-body">
-								<?php include 'alert.php'; ?>
+								<?php include('../alert.php') ?>
                 <p>Tanggal Pengajuan</p>
 									<input type="hidden" name="id_jadwal_pkl" class="form-control" value="<?= $jdw['id_jadwal_pkl'] ?>" readonly>
                   <input type="text" name="tgl_pengajuan" class="form-control" value="<?= date('d-m-Y'); ?>" readonly>

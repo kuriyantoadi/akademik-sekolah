@@ -1,5 +1,5 @@
 <?php include('header.php') ?>
-<?php include('function.php') ?>
+<?php include('../function.php') ?>
 
 <!-- END LEFT SIDEBAR -->
 <!-- MAIN -->
@@ -14,7 +14,7 @@
             <h2 style="margin-top: 30px">Daftar Mata Pelajaran</h2>
           </center>
 
-          <?php include('alert.php') ?>
+          <?php include('../alert.php') ?>
 
           <table class="table table-bordered table-hover" id="example">
             <thead>
@@ -37,7 +37,7 @@
               </tr>
             </thead>
             <?php
-                    include 'koneksi.php';
+                    include '../koneksi.php';
                     $no = 1;
                     // echo $id_guru;
                     $data = mysqli_query($koneksi, "SELECT * from tb_mapel, tb_guru, tb_kelas WHERE

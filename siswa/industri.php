@@ -1,5 +1,5 @@
 <?php include('header.php') ?>
-<?php include('function.php') ?>
+<?php include('../function.php') ?>
 
 <!-- END LEFT SIDEBAR -->
 <!-- MAIN -->
@@ -16,7 +16,6 @@
 
           <?php include('alert.php') ?>
 
-
           <table class="table table-bordered table-hover" id="example">
             <thead>
               <tr>
@@ -26,19 +25,23 @@
                 <th>
                   <center>Nama Tempat industri
                 </th>
+
                 <th>
-                  <center>Jenis Tempat industri
+                  <center>Kuota
                 </th>
                 <th>
-                  <center>Link Industri
+                  <center>Status
                 </th>
-              
+                <th>
+                  <center>Pilihan
+                </th>
               </tr>
             </thead>
             <?php
-                    include 'koneksi.php';
+                    include '../koneksi.php';
                     $no = 1;
-                    $data = mysqli_query($koneksi, "SELECT * from tb_industri ");
+                    $data = mysqli_query($koneksi, "SELECT * from tb_industri, tb_jadwal_pkl where
+                      tb_industri.id_industri=tb_jadwal_pkl.id_industri and tb_jadwal_pkl.status='buka' ");
                     while ($d = mysqli_fetch_array($data)) {
                     ?>
             <tr>
@@ -48,13 +51,24 @@
               <td>
                 <?= $d['nama_industri']; ?>
               </td>
-              <td>
-                <?= $d['jenis_industri']; ?>
+
+              <td><center>
+                <?= $d['kuota']; ?>
               </td>
-              <td>
-                <?= $d['link_industri']; ?>
+              <td><center>
+                <?= $d['status']; ?>
               </td>
 
+              <td>
+                <center>
+
+                  <a href="https://<?= $d['link_industri'] ?>">
+                    <span class="label label-default">Lihat Web</span>
+                  </a>
+                  <a href="industri_lihat.php?id_jadwal_pkl=<?= $d['id_jadwal_pkl'] ?>">
+                    <span class="label label-success">Lihat</span>
+                  </a>
+              </td>
             </tr>
 
             <?php } ?>

@@ -1,5 +1,5 @@
 <?php include('header.php') ?>
-<?php include('function.php') ?>
+<?php include('../function.php') ?>
 
 		<!-- END LEFT SIDEBAR -->
 		<!-- MAIN -->
@@ -15,7 +15,7 @@
               </div>
 
               <?php
-              include 'koneksi.php';
+              include '../koneksi.php';
               $nisn_siswa = $_GET['nisn_siswa'];
               $data = mysqli_query($koneksi, "SELECT * from tb_industri, tb_siswa, tb_pengajuan, tb_kelas	where
 								(tb_pengajuan.id_industri=tb_industri.id_industri and tb_pengajuan.nisn_siswa=tb_siswa.nisn_siswa	AND tb_siswa.id_kelas=tb_kelas.id_kelas) AND tb_pengajuan.nisn_siswa='$nisn_siswa' ");
@@ -28,7 +28,7 @@
                ?>
 
               <div class="panel-body">
-								<?php include 'alert.php'; ?>
+								<?php include('../alert.php') ?>
                 <p>Tanggal Pengajuan</p>
 									<input type="hidden" name="id_jadwal_pkl" class="form-control" value="<?= $d['id_jadwal_pkl'] ?>" readonly>
                   <input type="text" name="tgl_pengajuan" class="form-control" value="<?= date('d-m-Y'); ?>" readonly>

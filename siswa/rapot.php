@@ -1,5 +1,5 @@
 <?php include('header.php') ?>
-<?php include('function.php') ?>
+<?php include('../function.php') ?>
 
 		<!-- END LEFT SIDEBAR -->
 		<!-- MAIN -->
@@ -15,8 +15,8 @@
               </center>
 
                   <?php
-                  include 'koneksi.php';
-									include "alert.php";
+                  include '../koneksi.php';
+									include "../alert.php";
                   $nisn_siswa = $_GET['nisn_siswa'];
                   $data = mysqli_query($koneksi, "SELECT * from tb_siswa, tb_kelas where tb_siswa.id_kelas=tb_kelas.id_kelas and tb_siswa.nisn_siswa='$nisn_siswa' ");
                   while ($d = mysqli_fetch_array($data)) {
@@ -57,7 +57,7 @@
 														<?php  }else { ?>
 															Rapot Tersedia
 															<br>
-															<a class="btn btn-success btn-sm" href="assets/rapot_sms1/<?= $rapot1 ?>">Download </a>
+															<a class="btn btn-success btn-sm" href="../assets/rapot_sms1/<?= $rapot1 ?>">Download </a>
 															<?php
 														}
 													?>
@@ -74,7 +74,7 @@
 														<?php  }else { ?>
 															Rapot Tersedia
 															<br>
-															<a class="btn btn-success btn-sm" href="assets/rapot_sms2/<?= $rapot2 ?>">Download </a>
+															<a class="btn btn-success btn-sm" href="../assets/rapot_sms2/<?= $rapot2 ?>">Download </a>
 														<?php
 														}
 														?>
@@ -91,7 +91,7 @@
 														<?php  }else { ?>
 															Rapot Tersedia
 															<br>
-															<a class="btn btn-success btn-sm" href="assets/rapot_sms3/<?= $rapot3 ?>">Download </a>
+															<a class="btn btn-success btn-sm" href="../assets/rapot_sms3/<?= $rapot3 ?>">Download </a>
 															<?php
 														}
 														?>
@@ -108,7 +108,7 @@
 														<?php  }else { ?>
 															Rapot Tersedia
 															<br>
-															<a class="btn btn-success btn-sm" href="assets/rapot_sms4/<?= $rapot4 ?>">Download </a>
+															<a class="btn btn-success btn-sm" href="../assets/rapot_sms4/<?= $rapot4 ?>">Download </a>
 															<?php
 														}
 														?>
@@ -125,7 +125,7 @@
 														<?php  }else { ?>
 															Rapot Tersedia
 															<br>
-															<a class="btn btn-success btn-sm" href="assets/rapot_sms5/<?= $rapot5 ?>">Download </a>
+															<a class="btn btn-success btn-sm" href="../assets/rapot_sms5/<?= $rapot5 ?>">Download </a>
 																<?php
 														}
 														?>
@@ -142,7 +142,7 @@
 														<?php  }else { ?>
 															Rapot Tersedia
 															<br>
-															<a class="btn btn-success btn-sm" href="assets/rapot_sms6/<?= $rapot6 ?>">Download </a>
+															<a class="btn btn-success btn-sm" href="../assets/rapot_sms6/<?= $rapot6 ?>">Download </a>
 														<?php
 														}
 														?>

@@ -1,5 +1,5 @@
 <?php include('header.php') ?>
-<?php include('function.php') ?>
+<?php include('../function.php') ?>
 
 		<!-- END LEFT SIDEBAR -->
 		<!-- MAIN -->
@@ -17,8 +17,8 @@
 
 
                   <?php
-                  include 'koneksi.php';
-									include "alert.php";
+                  include '../koneksi.php';
+									include "../alert.php";
                   // $nisn_siswa = $_GET['nisn_siswa'];
                   $data = mysqli_query($koneksi, "SELECT * from tb_siswa, tb_kelas where tb_siswa.id_kelas=tb_kelas.id_kelas and tb_siswa.nisn_siswa='$nisn_siswa' ");
                   while ($d = mysqli_fetch_array($data)) {

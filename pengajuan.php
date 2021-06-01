@@ -11,7 +11,7 @@
       <div class="panel panel-headline">
         <div class="panel-body">
           <center>
-            <h2 style="margin-top: 30px; margin-bottom: 50px">Daftar Siswa Prakerin</h2>
+            <h2 style="margin-top: 30px; margin-bottom: 50px">Daftar Pengajuan Prakerin</h2>
           </center>
 
           <?php include('alert.php') ?>
@@ -34,15 +34,14 @@
                 <th>
                   <center>Kondisi
                 </th>
-
+              
               </tr>
             </thead>
             <?php
                     include 'koneksi.php';
                     $no = 1;
                     $data = mysqli_query($koneksi, "SELECT * from tb_pengajuan, tb_industri, tb_siswa
-                      where tb_pengajuan.id_industri=tb_industri.id_industri
-                      and tb_siswa.nisn_siswa=tb_pengajuan.nisn_siswa and tb_pengajuan.kondisi='Di ijinkan'");
+                      where tb_pengajuan.id_industri=tb_industri.id_industri and tb_siswa.nisn_siswa=tb_pengajuan.nisn_siswa ");
                     while ($d = mysqli_fetch_array($data)) {
                     ?>
             <tr>

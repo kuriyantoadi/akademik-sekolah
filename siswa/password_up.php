@@ -1,6 +1,6 @@
 <?php
 
-include 'koneksi.php';
+include '../koneksi.php';
 
 $nisn_siswa = $_POST['nisn_siswa'];
 $password = $_POST['password'];

@@ -11,10 +11,10 @@
 					<div class="panel panel-headline">
 						<div class="panel-body">
               <center>
-                <h2 style="margin-top: 10px">Daftar Guru</h2>
+                <h2 style="margin-top: 10px">Daftar Alumni</h2>
               </center>
 							<?php include('../alert.php') ?>
-							<a style="margin-top: 10px; margin-bottom: 20px" type="button" class="btn btn-success btn-xs" href="guru_tambah.php">Tambah Guru</a>
+							<a style="margin-top: 10px; margin-bottom: 20px" type="button" class="btn btn-success btn-xs" href="alumni_tambah.php">Tambah Alumni</a>
 
               <table class="table table-bordered table-hover" id="example">
                   <thead>
@@ -23,13 +23,16 @@
                               <center>No
                           </th>
 													<th>
-															<center>NIK
+															<center>Nama Alumni
 													</th>
                           <th>
-                              <center>Nama Guru
+                              <center>Jurusan
                           </th>
                           <th>
-                              <center>Kompetensi
+                              <center>Angkatan
+                          </th>
+                          <th>
+                              <center>Tempat Kerja/Kuliah
                           </th>
                           <th>
                               <center>Status
@@ -42,7 +45,7 @@
                   <?php
                   include '../koneksi.php';
                   $no = 1;
-                  $data = mysqli_query($koneksi, "SELECT * from tb_guru ");
+                  $data = mysqli_query($koneksi, "SELECT * from tb_alumni ");
                   while ($d = mysqli_fetch_array($data)) {
                   ?>
                       <tr>
@@ -50,32 +53,30 @@
                               <center><?php echo $no++ ?>
                           </td>
                           <td>
-                              <?php echo $d['nik_guru']; ?>
+                              <?php echo $d['nama_alumni']; ?>
                           </td>
 													<td>
-															<?php echo $d['nama_guru']; ?>
+															<?php echo $d['jurusan_alumni']; ?>
 													</td>
                           <td>
-                              <?php echo $d['kompetensi']; ?>
+                              <?php echo $d['angkatan']; ?>
+                          </td>
+                          <td>
+                              <center><?= $d['tempat_kerja'];  ?>
                           </td>
                           <td>
                               <center><?= $d['status'];  ?>
                           </td>
                           <td><center>
                               <!-- <a type="button" class="btn-primary btn-xs" href="#">Kecil</a> -->
-                              <a href="guru_hapus.php?id_guru=<?php echo $d['id_guru']; ?>" onclick="return confirm('Anda yakin Hapus data guru <?php echo $d['nama_guru']; ?> ?')">
+                              <a href="alumni_hapus.php?id_alumni=<?php echo $d['id_alumni']; ?>"
+                                onclick="return confirm('Anda yakin Hapus data Alumni <?php echo $d['nama_alumni']; ?> ?')">
                                 <span class="label label-danger">Hapus</span>
                               </a>
-                              <a href="guru_edit.php?id_guru=<?php echo $d['id_guru'] ?>">
+                              <a href="alumni_edit.php?id_alumni=<?php echo $d['id_alumni'] ?>">
                                 <span class="label label-primary">Edit</span>
                               </a>
-                              <a href="guru_detail.php?id_guru=<?php echo $d['id_guru'] ?>">
-                                <span class="label label-success">Detail</span>
-                              </a>
-															<a href="guruAkun.php?id_guru=<?php echo $d['id_guru'] ?>">
-                                <span class="label label-warning">Akun</span>
-                              </a>
-                          </td>
+                            </td>
                       </tr>
                   <?php
                   } ?>

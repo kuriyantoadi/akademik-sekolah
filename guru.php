@@ -1,5 +1,5 @@
 <?php include('header.php') ?>
-<?php include('../function.php') ?>
+<?php include('function.php') ?>
 
 		<!-- END LEFT SIDEBAR -->
 		<!-- MAIN -->
@@ -13,7 +13,7 @@
               <center>
                 <h2 style="margin-top: 10px">Daftar Guru</h2>
               </center>
-							<?php include('../alert.php') ?>
+							<?php include('alert.php') ?>
 							<a style="margin-top: 10px; margin-bottom: 20px" type="button" class="btn btn-success btn-xs" href="guru_tambah.php">Tambah Guru</a>
 
               <table class="table table-bordered table-hover" id="example">
@@ -34,15 +34,13 @@
                           <th>
                               <center>Status
                           </th>
-                          <th>
-                              <center>Pilihan
-                          </th>
+
                       </tr>
                   </thead>
                   <?php
-                  include '../koneksi.php';
+                  include 'koneksi.php';
                   $no = 1;
-                  $data = mysqli_query($koneksi, "SELECT * from tb_guru ");
+                  $data = mysqli_query($koneksi, "SELECT * from tb_guru where status='guru'");
                   while ($d = mysqli_fetch_array($data)) {
                   ?>
                       <tr>
@@ -61,21 +59,7 @@
                           <td>
                               <center><?= $d['status'];  ?>
                           </td>
-                          <td><center>
-                              <!-- <a type="button" class="btn-primary btn-xs" href="#">Kecil</a> -->
-                              <a href="guru_hapus.php?id_guru=<?php echo $d['id_guru']; ?>" onclick="return confirm('Anda yakin Hapus data guru <?php echo $d['nama_guru']; ?> ?')">
-                                <span class="label label-danger">Hapus</span>
-                              </a>
-                              <a href="guru_edit.php?id_guru=<?php echo $d['id_guru'] ?>">
-                                <span class="label label-primary">Edit</span>
-                              </a>
-                              <a href="guru_detail.php?id_guru=<?php echo $d['id_guru'] ?>">
-                                <span class="label label-success">Detail</span>
-                              </a>
-															<a href="guruAkun.php?id_guru=<?php echo $d['id_guru'] ?>">
-                                <span class="label label-warning">Akun</span>
-                              </a>
-                          </td>
+
                       </tr>
                   <?php
                   } ?>

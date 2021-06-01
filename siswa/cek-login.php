@@ -6,7 +6,7 @@ session_start();
 // echo "salah php session";
 
 // menghubungkan dengan koneksi
-include 'koneksi.php';
+include '../koneksi.php';
 // echo "salah php inlucde";
 
 // menangkap data yang dikirim dari form

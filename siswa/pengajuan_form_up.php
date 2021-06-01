@@ -4,7 +4,7 @@ if ($_SESSION['status'] != "siswa") {
     header("location:login.php?pesan=belum_login");
 }
 
-include 'koneksi.php';
+include '../koneksi.php';
 
 $id_jadwal_pkl = $_POST['id_jadwal_pkl'];
 $tgl_pengajuan = $_POST['tgl_pengajuan'];

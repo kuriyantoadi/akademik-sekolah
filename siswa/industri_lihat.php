@@ -1,5 +1,5 @@
 <?php include('header.php') ?>
-<?php include('function.php') ?>
+<?php include('../function.php') ?>
 
 		<!-- END LEFT SIDEBAR -->
 		<!-- MAIN -->
@@ -15,8 +15,8 @@
               </center>
 
                   <?php
-                  include 'koneksi.php';
-									include "alert.php";
+                  include '../koneksi.php';
+									include "../alert.php";
                   $id_jadwal_pkl = $_GET['id_jadwal_pkl'];
                   $data = mysqli_query($koneksi, "SELECT * from tb_industri,tb_jadwal_pkl where tb_industri.id_industri=tb_jadwal_pkl.id_industri and id_jadwal_pkl='$id_jadwal_pkl' ");
                   while ($d = mysqli_fetch_array($data)) {
