@@ -14,7 +14,6 @@
                 <h2 style="margin-top: 10px">Daftar Guru</h2>
               </center>
 							<?php include('alert.php') ?>
-							<a style="margin-top: 10px; margin-bottom: 20px" type="button" class="btn btn-success btn-xs" href="guru_tambah.php">Tambah Guru</a>
 
               <table class="table table-bordered table-hover" id="example">
                   <thead>
