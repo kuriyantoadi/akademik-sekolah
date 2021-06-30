@@ -14,7 +14,7 @@
                 <h3 class="panel-title"><center>Tambah Alumni</h3>
               </div>
 
-              <form class="" action="alumni_edit_up.php" method="post">
+              <form class="" action="alumni_tambah_up.php" method="post">
 
               <div class="panel-body">
                 <p>Nama Alumni</p>
