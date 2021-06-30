@@ -10,7 +10,7 @@
 						<div class="panel-body">
               <center>
 							<h1>Selamat Datang di Sistem Informasi Akademik Sekolah</h1>
-							<h4>Anda Berhasil Login Sebagai Admin</h4>
+							<h4>SMK Negeri 1 Ciruas</h4>
 						</div>
 					</div>
 				</div>
