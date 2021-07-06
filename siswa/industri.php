@@ -14,7 +14,7 @@
             <h2 style="margin-top: 30px">Daftar Industri</h2>
           </center>
 
-          <?php include('alert.php') ?>
+          <?php include('../alert.php') ?>
 
           <table class="table table-bordered table-hover" id="example">
             <thead>

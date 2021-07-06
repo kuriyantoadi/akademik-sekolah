@@ -21,7 +21,7 @@
               while ($d = mysqli_fetch_array($data)) {
                ?>
 
-              <form class="" action="password_up.php" method="post">
+              <form class="" action="siswa_password_up.php" method="post">
               <div class="panel-body">
                 <?php include '../alert.php'; ?>
                 <p>NISN</p>

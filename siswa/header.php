@@ -82,14 +82,23 @@ while ($d_id = mysqli_fetch_array($cek_id)) {
             <li><a href="profil.php" class=""><i class="lnr lnr-user"></i> <span>Profil Saya</span></a></li>
             <li><a href="mapel.php" class=""><i class="lnr lnr-enter"></i> <span>Materi Pelajaran</span></a></li>
             <li><a href="rapot.php?nisn_siswa=<?= $nisn_siswa ?>" class=""><i class="lnr lnr-book"></i> <span>Rapot</span></a></li>
-            <li><a href="https://smkn1ciruas.sch.id/wp/" class=""><i class="lnr lnr-phone-handset"></i> <span>Konseling</span></a></li>
             <?php if ($tingkat == 'XI') { ?>
-              <li><a href="industri.php" class=""><i class="lnr lnr-list"></i> <span>Daftar Industri</span></a></li>
-              <li><a href="pengajuan.php" class=""><i class="lnr lnr-location"></i> <span>Siswa Prakerin</span></a></li>
-              <li><a href="pengajuan_form_lihat.php?nisn_siswa=<?= $nisn_siswa ?>" class=""><i class="lnr lnr-upload"></i> <span>Form Pengajuan Prakerin</span></a></li>
+              <li>
+              <a href="#subPages" data-toggle="collapse" class="collapsed"><i class="lnr lnr-license"></i> <span>Prakerin</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+              <div id="subPages" class="collapse ">
+                <ul class="nav">
+                  <li><a href="industri.php" class=""><i class="lnr lnr-list"></i> <span>Daftar Industri</span></a></li>
+                  <li><a href="pengajuan.php" class=""><i class="lnr lnr-location"></i> <span>Siswa Prakerin</span></a></li>
+                  <li><a href="pengajuan_form_lihat.php?nisn_siswa=<?= $nisn_siswa ?>" class=""><i class="lnr lnr-upload"></i> <span>Pengajuan Prakerin</span></a></li>
+                  <li><a href="lap_prakerin.php" class=""><i class="lnr lnr-file-add"></i> <span>Laporan Prakerin</span></a></li>
+                </ul>
+              </div>
+            </li>
             <?php }else {
 
             } ?>
+            <li><a href="https://smkn1ciruas.sch.id/wp/" class=""><i class="lnr lnr-phone-handset"></i> <span>Konseling</span></a></li>
+
 					</ul>
 				</nav>
 			</div>

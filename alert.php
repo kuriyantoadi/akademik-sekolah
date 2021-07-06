@@ -261,5 +261,25 @@ if (isset($_GET['pesan'])) {
        </div>
        ";
    }
+   elseif ($_GET['pesan'] == "upload_prakerin_berhasil") {
+      echo "
+      <div class='alert alert-primary alert-dismissible' role='alert'>
+      <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+        <div class='alert-message'>
+          Upload File Prakerin Berhasil
+        </div>
+      </div>
+      ";
+  }
+  elseif ($_GET['pesan'] == "upload_prakerin_gagal") {
+     echo "
+     <div class='alert alert-primary alert-dismissible' role='alert'>
+     <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+       <div class='alert-message'>
+         Upload File Prakerin Gagal
+       </div>
+     </div>
+     ";
+ }
 }
 ?>

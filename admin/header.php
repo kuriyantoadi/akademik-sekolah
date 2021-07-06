@@ -78,6 +78,7 @@ $username = $_SESSION['username'];
                   <li><a href="industri.php" class=""><i class="lnr lnr-list"></i> <span>Daftar Industri</span></a></li>
                   <li><a href="jadwal_pkl.php" class=""><i class="lnr lnr-clock"></i> <span>Jadwal Prakerin</span></a></li>
       						<li><a href="pengajuan.php" class=""><i class="lnr lnr-enter-down"></i> <span>Pengajuan Prakerin</span></a></li>
+                  <li><a href="lap_prakerin.php" class=""><i class="lnr lnr-file-add"></i> <span>Laporan Prakerin</span></a></li>
                 </ul>
               </div>
             </li>
